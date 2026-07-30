@@ -17,7 +17,7 @@ export default function Header() {
           right: 0,
           zIndex: 50,
           backgroundColor: "#ffffff",
-          height: "72px",
+          height: "148px",
           display: "flex",
           alignItems: "center",
           borderBottom: "1px solid rgba(0,0,0,0.08)",
@@ -37,9 +37,9 @@ export default function Header() {
             <Image
               src="/images/dialogmat.png"
               alt="Illumine 艾璐管顧"
-              width={120}
-              height={40}
-              style={{ objectFit: "contain", height: "40px", width: "auto" }}
+              width={375}
+              height={125}
+              style={{ objectFit: "contain", height: "125px", width: "auto" }}
               priority
               unoptimized
             />
@@ -110,7 +110,7 @@ export default function Header() {
       </header>
 
       {/* Spacer for fixed header */}
-      <div style={{ height: "72px" }} />
+      <div style={{ height: "148px" }} />
     </>
   );
 }

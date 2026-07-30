@@ -17,8 +17,9 @@ const IMGS = {
   event2: "/images/event2.png",
   event3: "/images/event3.png",
   article1: "/images/article1.png",
-  article2: "/images/article2.png",
-  article3: "/images/article3.png",
+  article2: "/images/ll-digital.png",
+  article3: "/images/development.png",
+  llDigital: "/images/ll-digital.png",
   podcast: "/images/podcast.png",
   testimonial1: "/images/partner1.png",
   testimonial2: "/images/partner2.jpg",
@@ -42,8 +43,8 @@ const services = [
     en: "Lumina Assessment",
     zh: "特質測評發展工具",
     desc: "Lumina Learning 打破傳統「定型、分類」的性格測試格局，用動態、數位化、視覺化、互動體驗的方式展現出每個人的獨一無二及「個體性差異」，提供兼具科技與人性的「分析人的技術及學習發展應用工具」，協助組織、團隊、個人發展敏捷的思維與行動力！",
-    img: IMGS.lumina,
-    imgW: 1024, imgH: 768,
+    img: IMGS.podcast,
+    imgW: 1024, imgH: 1024,
     btns: [
       { label: "了解更多", href: "/lumina-learning", external: false },
       { label: "洽詢認證課", href: "https://docs.google.com/forms/d/e/1FAIpQLSc52OLdFL79IRuhW5DDyYMH7quJsxV5U7yA4_8ZW8nmWs_WDA/viewform", external: true },
@@ -53,11 +54,11 @@ const services = [
   },
   {
     tag: "",
-    en: "DialogMat 思考圖",
-    zh: "",
+    en: "",
+    zh: "DialogMat 思考圖",
     desc: "透過結合 SPECIFIQUE 的 DialogMat 思考圖，將可幫助您的團隊針對組織發展、變革管理、內部溝通、流程優化等各種議題實現「對話-對焦-對策」，高效聚焦、深度對話、同步資訊、凝聚共識，產出精準且具執行力的決策方案。",
-    img: IMGS.dialogmat,
-    imgW: 2480, imgH: 1748,
+    img: IMGS.about,
+    imgW: 1200, imgH: 800,
     btns: [
       { label: "了解更多", href: "https://weekielife.com/blog/dialogmat-visual-dialogue-tool", external: true },
     ],
@@ -69,8 +70,8 @@ const services = [
     en: "Interesting. Interactive. Innovative. Inspiring. In-depth Learning.",
     zh: "培訓學程",
     desc: "我們提供各式主題學習工作坊，並可根據客戶需求，結合 Lumina Learning 人才測評工具、DialogMat思考圖及其他理論應用工具與方法，規劃客製化主題學程，營造有趣、互動的體驗式共學場域，激發學員創造力，促進深度覺察與有效學習。",
-    img: IMGS.training,
-    imgW: 2653, imgH: 1580,
+    img: IMGS.partner2,
+    imgW: 398, imgH: 300,
     btns: [
       { label: "了解更多", href: "https://weekielife.com/blog/illumine-what-we-do", external: true },
     ],
@@ -82,7 +83,7 @@ const services = [
     en: "Coaching Programs",
     zh: "教練支持發展計劃",
     desc: "根據企業組織團隊與個人的學習發展需求，為企業內的高階主管、團隊成員客製規劃長期、短期的教練支持計畫，有效支持個人與團隊的共學、共創，讓想要的改變發生！",
-    img: IMGS.coaching,
+    img: IMGS.cta,
     imgW: 1220, imgH: 911,
     btns: [
       { label: "了解更多", href: "https://weekielife.com/blog/illumine-what-we-do", external: true },
@@ -95,8 +96,8 @@ const services = [
     en: "Development Solutions",
     zh: "組織人員適性發展解決方案",
     desc: "依據組織團隊現況及目標，做人才資源盤點檢核，針對「高階領導接班人」做個人化學習與發展支持，提升個人的領導能力；針對跨部門及不同階層的關鍵人才，規畫短中長期的組織暨個人化學習發展計劃。",
-    img: IMGS.development,
-    imgW: 1024, imgH: 770,
+    img: "/images/ll-3layers.png",
+    imgW: 1748, imgH: 1412,
     btns: [
       { label: "了解更多", href: "https://weekielife.com/blog/illumine-what-we-do", external: true },
     ],
@@ -108,17 +109,17 @@ const services = [
 const events = [
   {
     title: "2025 ATD亞太年會 × Lumina Learning Taiwan｜限量VIP免費觀展證申請中！",
-    img: IMGS.event1, imgW: 1024, imgH: 639,
+    img: IMGS.event2, imgW: 889, imgH: 498,
     link: "https://weekielife.com/blog/atd-lumina-vip-2025",
   },
   {
     title: "9月共學會｜Lumina Spark高階主管教練應用全攻略",
-    img: IMGS.event2, imgW: 889, imgH: 498,
+    img: IMGS.coaching, imgW: 1220, imgH: 911,
     link: "https://weekielife.com/blog/lumina-spark-executive-coaching-0923",
   },
   {
     title: "擁抱不確定性：Lumina Spark × 即興 的探索與創造之旅",
-    img: IMGS.event3, imgW: 1024, imgH: 566,
+    img: IMGS.lumina, imgW: 1024, imgH: 768,
     link: "https://weekielife.com/blog/lumina-spark-improvisation-workshop",
   },
 ];
@@ -126,18 +127,18 @@ const events = [
 const articles = [
   {
     title: "Lumina Learning 應用工具介紹｜Leader・Team・Sales・Emotion・Select 全解析",
-    img: IMGS.article1, imgW: 720, imgH: 540,
+    img: IMGS.event3, imgW: 1024, imgH: 566,
     link: "https://weekielife.com/blog/lumina-learning-tools-overview",
   },
   {
     title: "Illumine Coaching｜打造覺察力 × 行動力 × 領導力的企業成長夥伴",
     subtitle: "從學習設計、教練支持到組織發展，一站式培訓方案，助力企業蛻變與升級",
-    img: IMGS.article2, imgW: 720, imgH: 540,
+    img: IMGS.article2, imgW: 2022, imgH: 1252,
     link: "https://weekielife.com/blog/illumine-what-we-do",
   },
   {
     title: "Lumina Learning 認證合作夥伴計畫",
-    img: IMGS.article3, imgW: 720, imgH: 540,
+    img: IMGS.article3, imgW: 1024, imgH: 770,
     link: "https://weekielife.com/hashtag/illumine-lumine-course",
   },
 ];
@@ -403,7 +404,7 @@ export default function HomePage() {
                 style={{
                   fontFamily: "'Noto Sans', sans-serif",
                   fontWeight: 900,
-                  fontSize: "clamp(22px, 2.5vw, 32px)",
+                  fontSize: "clamp(26px, 3vw, 38px)",
                   color: "#f9bd00",
                   letterSpacing: "0.06em",
                 }}
@@ -430,24 +431,44 @@ export default function HomePage() {
             <div style={{ display: "flex", flexDirection: "column" }}>
               {services.map((svc, i) => (
                 <div key={i}>
+                  {/* 第2項起若有前言，顯示在 row 上方 */}
+                  {i > 0 && svc.prefix && (
+                    <p
+                      style={{
+                        fontFamily: "'Noto Sans', sans-serif",
+                        fontWeight: 400,
+                        fontSize: "15px",
+                        lineHeight: 1.85,
+                        color: "#444",
+                        marginBottom: "40px",
+                      }}
+                    >
+                      {svc.prefix}
+                    </p>
+                  )}
                   <div className="svc-row" data-imgright={svc.imgRight ? "true" : "false"}>
                     {/* 圖片 */}
                     <div
                       className="svc-img"
-                      style={{
-                        borderRadius: "12px",
-                        overflow: "hidden",
-                        aspectRatio: `${svc.imgW}/${svc.imgH}`,
-                      }}
+                      style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
                     >
-                      <Image
-                        src={svc.img}
-                        alt={svc.zh || svc.en}
-                        width={svc.imgW}
-                        height={svc.imgH}
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                        unoptimized
-                      />
+                      <div
+                        style={{
+                          width: "64%",
+                          borderRadius: "16px",
+                          overflow: "hidden",
+                          aspectRatio: "1/1",
+                        }}
+                      >
+                        <Image
+                          src={svc.img}
+                          alt={svc.zh || svc.en}
+                          width={svc.imgW}
+                          height={svc.imgH}
+                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                          unoptimized
+                        />
+                      </div>
                     </div>
 
                     {/* 文字 */}
@@ -470,7 +491,7 @@ export default function HomePage() {
                           style={{
                             fontFamily: "'Noto Sans', sans-serif",
                             fontWeight: 900,
-                            fontSize: "clamp(22px, 2.5vw, 34px)",
+                            fontSize: "clamp(18px, 2vw, 27px)",
                             color: "#f9bd00",
                             lineHeight: 1.3,
                             marginBottom: "20px",
@@ -484,7 +505,7 @@ export default function HomePage() {
                         style={{
                           fontFamily: "'Noto Sans', sans-serif",
                           fontWeight: 400,
-                          fontSize: "15px",
+                          fontSize: "18px",
                           lineHeight: 1.9,
                           color: "#333",
                           marginBottom: "28px",
@@ -501,13 +522,14 @@ export default function HomePage() {
                             target={btn.external ? "_blank" : undefined}
                             rel={btn.external ? "noopener noreferrer" : undefined}
                             className={bi === 0 ? "btn-accent" : "btn-dark"}
+                            style={{ fontSize: "17px" }}
                           >
-                            {btn.label} &rsaquo;
+                            {btn.label}&nbsp;&nbsp;<span style={{ fontSize: "20px" }}>›</span>
                           </a>
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </div>{/* end svc-row */}
 
                   {/* 虛線分隔 */}
                   {i < services.length - 1 && (
@@ -524,30 +546,50 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── 區隔線 + Logo ── */}
+        <section style={{ backgroundColor: "#ffffff", paddingTop: "4px", paddingBottom: "4px" }}>
+          <div className="container-inner">
+            {/* 黃色虛線 */}
+            <div
+              style={{
+                borderTop: "2px dashed rgba(249,189,0,0.6)",
+                marginBottom: "4px",
+              }}
+            />
+            {/* 置中 Logo */}
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <Image
+                src="/images/dialogmat.png"
+                alt="Illumine 艾璐管顧"
+                width={648}
+                height={216}
+                style={{ objectFit: "contain", height: "216px", width: "auto" }}
+                unoptimized
+              />
+            </div>
+          </div>
+        </section>
+
         {/* ── 最新活動 ── */}
         <section style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                marginBottom: "40px",
-                flexWrap: "wrap",
-                gap: "12px",
-              }}
-            >
-              <div className="section-label">最新活動</div>
-              <a
-                href="https://weekielife.com/hashtag/illumine-lumina-event"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-dark"
+            {/* 置中金色標題 */}
+            <div style={{ textAlign: "center", marginBottom: "48px" }}>
+              <span
+                style={{
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(26px, 3vw, 38px)",
+                  color: "#f9bd00",
+                  letterSpacing: "0.06em",
+                }}
               >
-                瀏覽全部
-              </a>
+                &bull;&nbsp;&nbsp;最新活動&nbsp;&nbsp;&bull;
+              </span>
             </div>
-            <div className="three-col-grid">
+
+            {/* 卡片 */}
+            <div className="three-col-grid" style={{ marginBottom: "48px" }}>
               {events.map((ev, i) => (
                 <a
                   key={i}
@@ -555,15 +597,17 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="card-hover"
-                  style={{
-                    display: "block",
-                    textDecoration: "none",
-                    borderRadius: "12px",
-                    overflow: "hidden",
-                    backgroundColor: "#f8f8fa",
-                  }}
+                  style={{ display: "block", textDecoration: "none" }}
                 >
-                  <div style={{ aspectRatio: "4/3", position: "relative" }}>
+                  <div
+                    style={{
+                      aspectRatio: "3/2",
+                      position: "relative",
+                      borderRadius: "16px",
+                      overflow: "hidden",
+                      marginBottom: "16px",
+                    }}
+                  >
                     <Image
                       src={ev.img}
                       alt={ev.title}
@@ -572,49 +616,57 @@ export default function HomePage() {
                       unoptimized
                     />
                   </div>
-                  <div style={{ padding: "20px 20px 24px" }}>
-                    <p
-                      style={{
-                        fontFamily: "'Noto Sans', sans-serif",
-                        fontWeight: 600,
-                        fontSize: "15px",
-                        lineHeight: 1.65,
-                        color: "#221616",
-                      }}
-                    >
-                      {ev.title}
-                    </p>
-                  </div>
+                  <p
+                    style={{
+                      fontFamily: "'Noto Sans', sans-serif",
+                      fontWeight: 600,
+                      fontSize: "15px",
+                      lineHeight: 1.65,
+                      color: "#221616",
+                      textAlign: "center",
+                    }}
+                  >
+                    {ev.title}
+                  </p>
                 </a>
               ))}
+            </div>
+
+            {/* 瀏覽全部按鈕 - 置中 */}
+            <div style={{ textAlign: "center" }}>
+              <a
+                href="https://weekielife.com/hashtag/illumine-lumina-event"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent"
+                style={{ fontSize: "17px" }}
+              >
+                瀏覽全部&nbsp;&nbsp;<span style={{ fontSize: "20px" }}>›</span>
+              </a>
             </div>
           </div>
         </section>
 
         {/* ── 最新文章 ── */}
-        <section style={{ backgroundColor: "#f8f8fa" }} className="section-py">
+        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                marginBottom: "40px",
-                flexWrap: "wrap",
-                gap: "12px",
-              }}
-            >
-              <div className="section-label">最新文章</div>
-              <a
-                href="https://weekielife.com/hashtag/illumine-lumine-course"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-dark"
+            {/* 置中金色標題 */}
+            <div style={{ textAlign: "center", marginBottom: "48px" }}>
+              <span
+                style={{
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(26px, 3vw, 38px)",
+                  color: "#f9bd00",
+                  letterSpacing: "0.06em",
+                }}
               >
-                瀏覽全部
-              </a>
+                &bull;&nbsp;&nbsp;最新文章&nbsp;&nbsp;&bull;
+              </span>
             </div>
-            <div className="three-col-grid">
+
+            {/* 卡片 */}
+            <div className="three-col-grid" style={{ marginBottom: "48px" }}>
               {articles.map((art, i) => (
                 <a
                   key={i}
@@ -622,16 +674,17 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="card-hover"
-                  style={{
-                    display: "block",
-                    textDecoration: "none",
-                    borderRadius: "12px",
-                    overflow: "hidden",
-                    backgroundColor: "#ffffff",
-                    boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
-                  }}
+                  style={{ display: "block", textDecoration: "none" }}
                 >
-                  <div style={{ aspectRatio: "4/3", position: "relative" }}>
+                  <div
+                    style={{
+                      aspectRatio: "3/2",
+                      position: "relative",
+                      borderRadius: "16px",
+                      overflow: "hidden",
+                      marginBottom: "16px",
+                    }}
+                  >
                     <Image
                       src={art.img}
                       alt={art.title}
@@ -640,35 +693,48 @@ export default function HomePage() {
                       unoptimized
                     />
                   </div>
-                  <div style={{ padding: "20px 20px 24px" }}>
+                  <p
+                    style={{
+                      fontFamily: "'Noto Sans', sans-serif",
+                      fontWeight: 600,
+                      fontSize: "15px",
+                      lineHeight: 1.65,
+                      color: "#221616",
+                      textAlign: "center",
+                      marginBottom: "subtitle" in art && art.subtitle ? "6px" : "0",
+                    }}
+                  >
+                    {art.title}
+                  </p>
+                  {"subtitle" in art && art.subtitle && (
                     <p
                       style={{
                         fontFamily: "'Noto Sans', sans-serif",
-                        fontWeight: 600,
-                        fontSize: "15px",
+                        fontWeight: 400,
+                        fontSize: "13px",
                         lineHeight: 1.65,
-                        color: "#221616",
-                        marginBottom: "subtitle" in art && art.subtitle ? "6px" : "0",
+                        color: "#666",
+                        textAlign: "center",
                       }}
                     >
-                      {art.title}
+                      {art.subtitle}
                     </p>
-                    {"subtitle" in art && art.subtitle && (
-                      <p
-                        style={{
-                          fontFamily: "'Noto Sans', sans-serif",
-                          fontWeight: 400,
-                          fontSize: "13px",
-                          lineHeight: 1.65,
-                          color: "#666",
-                        }}
-                      >
-                        {art.subtitle}
-                      </p>
-                    )}
-                  </div>
+                  )}
                 </a>
               ))}
+            </div>
+
+            {/* 瀏覽全部按鈕 - 置中 */}
+            <div style={{ textAlign: "center" }}>
+              <a
+                href="https://weekielife.com/hashtag/illumine-lumine-course"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent"
+                style={{ fontSize: "17px" }}
+              >
+                瀏覽全部&nbsp;&nbsp;<span style={{ fontSize: "20px" }}>›</span>
+              </a>
             </div>
           </div>
         </section>
@@ -676,50 +742,63 @@ export default function HomePage() {
         {/* ── Podcast ── */}
         <section style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
-            <div style={{ marginBottom: "40px" }}>
-              <div className="section-label">Podcast</div>
+            {/* 標題 */}
+            <p
+              style={{
+                fontFamily: "'Noto Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(26px, 3vw, 38px)",
+                color: "#f9bd00",
+                textAlign: "center",
+                letterSpacing: "0.06em",
+                marginBottom: "40px",
+              }}
+            >
+              &bull;&nbsp;&nbsp;Podcast&nbsp;&nbsp;&bull;
+            </p>
+
+            {/* 3 個 Apple Podcast iframe */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "40px" }}>
+              <iframe
+                src="https://embed.podcasts.apple.com/tw/podcast/id1787258290?i=1000737003742&theme=light"
+                width="100%"
+                height="175px"
+                frameBorder="0"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                allow="autoplay *; encrypted-media *;"
+                style={{ borderRadius: "12px" }}
+              />
+              <iframe
+                src="https://embed.podcasts.apple.com/tw/podcast/id1787258290?i=1000734903853&theme=light"
+                width="100%"
+                height="175px"
+                frameBorder="0"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                allow="autoplay *; encrypted-media *;"
+                style={{ borderRadius: "12px" }}
+              />
+              <iframe
+                src="https://embed.podcasts.apple.com/tw/podcast/id1787258290?i=1000732567723&theme=light"
+                width="100%"
+                height="175px"
+                frameBorder="0"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                allow="autoplay *; encrypted-media *;"
+                style={{ borderRadius: "12px" }}
+              />
             </div>
-            <div className="about-grid">
-              <div
-                style={{
-                  borderRadius: "16px",
-                  overflow: "hidden",
-                  aspectRatio: "1/1",
-                  position: "relative",
-                }}
+
+            {/* 瀏覽全部按鈕 - 置中 */}
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <a
+                href="https://linktr.ee/Me.We_Palette"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent"
+                style={{ fontSize: "17px", padding: "12px 28px" }}
               >
-                <Image
-                  src={IMGS.podcast}
-                  alt="Me.We Palette Podcast"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  unoptimized
-                />
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <h3
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(20px, 2.5vw, 32px)",
-                    color: "#221616",
-                    lineHeight: 1.4,
-                    marginBottom: "24px",
-                  }}
-                >
-                  Me.We_Palette Podcast
-                </h3>
-                <div>
-                  <a
-                    href="https://linktr.ee/Me.We_Palette"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-dark"
-                  >
-                    瀏覽全部
-                  </a>
-                </div>
-              </div>
+                瀏覽全部&nbsp;&nbsp;<span style={{ fontSize: "20px" }}>›</span>
+              </a>
             </div>
           </div>
         </section>
