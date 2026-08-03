@@ -190,124 +190,182 @@ export default function LuminaLearningPage() {
       <Header />
       <main>
         {/* ── Hero ── */}
-        <section
-          style={{
-            position: "relative",
-            minHeight: "clamp(360px, 45vw, 520px)",
-            display: "flex",
-            alignItems: "center",
-            overflow: "hidden",
-            backgroundColor: "#24201e",
-          }}
-        >
+        <section style={{ width: "100%", overflow: "hidden", lineHeight: 0 }}>
           <Image
-            src={I("ll-hero.jpg")}
-            alt="Lumina Learning Hero"
-            fill
-            style={{ objectFit: "cover", objectPosition: "center" }}
+            src="/images/ll-hero-bright.jpg"
+            alt="Lumina Learning"
+            width={2558}
+            height={1124}
+            style={{ width: "100%", height: "auto", display: "block" }}
             priority
             unoptimized
           />
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(90deg, rgba(36,32,30,0.9) 0%, rgba(36,32,30,0.6) 55%, rgba(36,32,30,0.1) 100%)",
-            }}
-          />
-          <div
-            className="container-inner"
-            style={{ position: "relative", zIndex: 2, paddingTop: "80px", paddingBottom: "80px" }}
-          >
-            <h1
+        </section>
+
+        {/* ── Hero Title ── */}
+        <section style={{ backgroundColor: "#ffffff", paddingTop: "48px", paddingBottom: "20px" }}>
+          <div className="container-inner" style={{ textAlign: "center" }}>
+            <span
               style={{
                 fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 900,
-                fontSize: "clamp(24px, 3.5vw, 48px)",
-                lineHeight: 1.2,
-                color: "#ffffff",
-                marginBottom: "12px",
-                maxWidth: "600px",
+                fontWeight: 700,
+                fontSize: "clamp(27px, 3vw, 48px)",
+                color: "#f9bd00",
+                letterSpacing: "0.02em",
+                lineHeight: 1.6,
               }}
             >
-              Lumina Learning
-              <br />
-              <span style={{ color: "#f9bd00" }}>幫助你了解「人」的科學</span>
-            </h1>
+              &bull;&nbsp;&nbsp;Lumina Learning — 幫助你了解「人」的科學&nbsp;&nbsp;&bull;
+            </span>
           </div>
         </section>
 
         {/* ── 關於 Lumina / 理論基礎 / 主張價值 Tabs ── */}
-        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
+        <section id="about-lumina" style={{ backgroundColor: "#ffffff", paddingTop: "24px" }} className="section-py">
           <div className="container-inner">
             {/* Tab buttons */}
-            <div style={{ display: "flex", gap: "8px", marginBottom: "48px", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: "16px", marginBottom: "48px", flexWrap: "wrap", justifyContent: "center" }}>
               {tabContent.map((tab, i) => (
                 <button
                   key={i}
                   onClick={() => setActiveTab(i)}
                   style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "6px",
                     fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 600,
-                    fontSize: "14px",
-                    padding: "9px 22px",
-                    borderRadius: "100px",
+                    fontWeight: 500,
+                    fontSize: "18px",
+                    letterSpacing: "0.02em",
+                    lineHeight: 1.6,
+                    padding: "12px 32px 10px",
+                    borderRadius: "200px",
                     cursor: "pointer",
-                    border: activeTab === i ? "none" : "1px solid #ddd",
-                    background: activeTab === i ? "#221616" : "transparent",
-                    color: activeTab === i ? "#ffffff" : "#555",
+                    border: activeTab === i ? "none" : "2px solid #f9bd00",
+                    background: activeTab === i ? "#f9bd00" : "#ffffff",
+                    color: activeTab === i ? "#ffffff" : "#221616",
                     transition: "all 0.2s",
                   }}
                 >
                   {tab.label}
+                  <svg width="14" height="9" viewBox="0 0 19.811 12.5" aria-hidden="true">
+                    <path
+                      d="M 8.338 10.522 C 9.139 11.532 10.672 11.532 11.473 10.522 L 14.858 6.25 C 14.858 6.25 14.858 6.25 14.858 6.25 L 17.335 3.125 C 18.336 1.861 17.436 0 15.824 0 L 9.906 0 L 9.906 0 L 3.987 0 C 2.375 0 1.475 1.861 2.476 3.125 L 4.953 6.25 C 4.953 6.25 4.953 6.25 4.953 6.25 Z"
+                      fill={activeTab === i ? "#ffffff" : "#f9bd00"}
+                    />
+                  </svg>
                 </button>
               ))}
             </div>
 
             {/* Tab content */}
-            {tabContent.map((tab, i) => (
-              <div
-                key={i}
-                style={{ display: activeTab === i ? "grid" : "none" }}
-                className="ll-two-col"
-              >
-                <div>
-                  {tab.content.split("\n\n").map((para, pi) => (
-                    <p
-                      key={pi}
-                      style={{
-                        fontFamily: "'Noto Sans', sans-serif",
-                        fontWeight: pi === 0 ? 700 : 400,
-                        fontSize: pi === 0 ? "17px" : "15px",
-                        lineHeight: 1.85,
-                        color: "#221616",
-                        marginBottom: "20px",
-                        whiteSpace: "pre-line",
-                      }}
-                    >
-                      {para}
+            {activeTab === 0 ? (
+              <div>
+                {/* Top row: left image + right heading */}
+                <div style={{ display: "flex", gap: "40px", alignItems: "center", marginBottom: "56px", flexWrap: "wrap" }}>
+                  <div style={{ flexShrink: 0, width: "clamp(220px, 31%, 320px)", borderRadius: "12px", overflow: "hidden" }}>
+                    <Image
+                      src="/images/ll-target4.png"
+                      alt="Lumina Learning"
+                      width={922}
+                      height={436}
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                      unoptimized
+                    />
+                  </div>
+                  <div style={{ flex: 1, minWidth: "240px" }}>
+                    <p style={{
+                      fontFamily: "'Noto Sans', sans-serif",
+                      fontWeight: 500,
+                      fontSize: "20px",
+                      color: "#221616",
+                      letterSpacing: "0.02em",
+                      lineHeight: 1.6,
+                      marginBottom: "8px",
+                    }}>
+                      一套結合理論、架構語言、系統化的方法及應用工具
                     </p>
-                  ))}
+                    <p style={{
+                      fontFamily: "'Noto Sans', sans-serif",
+                      fontWeight: 700,
+                      fontSize: "32px",
+                      color: "#221616",
+                      letterSpacing: "0.02em",
+                      lineHeight: 1.6,
+                    }}>
+                      「幫助你了解『人』的科學」
+                    </p>
+                  </div>
                 </div>
-                <div
-                  style={{
-                    borderRadius: "16px",
-                    overflow: "hidden",
-                    aspectRatio: "1/1",
-                    position: "relative",
-                  }}
-                >
-                  <Image
-                    src={tab.img}
-                    alt={tab.label}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    unoptimized
-                  />
+
+                {/* Centered text block */}
+                <div style={{
+                  textAlign: "center",
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontSize: "18px",
+                  color: "#333333",
+                  letterSpacing: "0.02em",
+                  lineHeight: 1.8,
+                  marginBottom: "56px",
+                }}>
+                  <p style={{ marginBottom: "32px" }}>
+                    Lumina Learning 來自英國，由 Dr. Stewart Desson 博士（創辦人兼 CEO）帶領團隊於 2008 年創立，<br />
+                    是一間高度創新、世界領先、與時俱進的心理測量學應用服務開發提供商，<br />
+                    持續提供全球頂尖的人格特質（Personality）、情商（Emotion Intelligence）、職能（Competency）等<br />
+                    測評暨個人化應用學習發展工具，並推廣相關產品技術服務導入應用的認證計劃（QualificationPrograms）。
+                  </p>
+                  <p style={{ marginBottom: "32px" }}>
+                    <strong>Lumina Learning</strong> 是一間為組織、團隊、個人提供創新、個人化的「招募」與「發展」整體解決方案的全球服務供應商，
+                    目前有將近 50 個國家導入我們 <strong>Lumina Spark ､ Lumina Team ､ Lumina Sales ､ Lumina Leader/Leader 360 ､Lumina Emotion、Lumina Select</strong> 等產品應用服務。
+                  </p>
+                  <p>
+                    我們提供各國語言版本產品，來自全球不同產業、專業領域的專家及持續成長的認證執行師網絡資源，<br />
+                    各區域在地化的合作夥伴支持服務，以滿足全球化企業及各區域大中小型企業、組織發展及多元人才發展的需求。
+                  </p>
                 </div>
+
+                {/* Bottom applications image */}
+                <Image
+                  src="/images/ll-applications.png"
+                  alt="Lumina Applications"
+                  width={1330}
+                  height={560}
+                  style={{ width: "70%", height: "auto", display: "block", margin: "0 auto" }}
+                  unoptimized
+                />
               </div>
-            ))}
+            ) : (
+              tabContent.slice(1).map((tab, i) => (
+                <div
+                  key={i + 1}
+                  style={{ display: activeTab === i + 1 ? "grid" : "none" }}
+                  className="ll-two-col"
+                >
+                  <div>
+                    {tab.content.split("\n\n").map((para, pi) => (
+                      <p
+                        key={pi}
+                        style={{
+                          fontFamily: "'Noto Sans', sans-serif",
+                          fontWeight: pi === 0 ? 700 : 400,
+                          fontSize: pi === 0 ? "17px" : "15px",
+                          lineHeight: 1.85,
+                          color: "#221616",
+                          marginBottom: "20px",
+                          whiteSpace: "pre-line",
+                        }}
+                      >
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                  <div style={{ borderRadius: "16px", overflow: "hidden", aspectRatio: "1/1", position: "relative" }}>
+                    <Image src={tab.img} alt={tab.label} fill style={{ objectFit: "cover" }} unoptimized />
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </section>
 
@@ -367,7 +425,7 @@ export default function LuminaLearningPage() {
         </section>
 
         {/* ── 解決方案：全系列 ── */}
-        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
+        <section id="products" style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
             <div style={{ marginBottom: "16px" }}>
               <h2
@@ -774,7 +832,7 @@ export default function LuminaLearningPage() {
         </section>
 
         {/* ── 應用情境及使用對象 ── */}
-        <section style={{ backgroundColor: "#f8f8fa" }} className="section-py">
+        <section id="use-cases" style={{ backgroundColor: "#f8f8fa" }} className="section-py">
           <div className="container-inner">
             <div style={{ marginBottom: "16px" }}>
               <div className="section-label">應用情境及使用對象</div>
@@ -845,7 +903,7 @@ export default function LuminaLearningPage() {
         </section>
 
         {/* ── 認證合作夥伴計劃 ── */}
-        <section style={{ backgroundColor: "#221616" }} className="section-py">
+        <section id="certification" style={{ backgroundColor: "#221616" }} className="section-py">
           <div className="container-inner">
             <div style={{ marginBottom: "16px" }}>
               <div
@@ -1056,7 +1114,7 @@ export default function LuminaLearningPage() {
         </section>
 
         {/* ── 常見問題 ── */}
-        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
+        <section id="faq" style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner" style={{ maxWidth: "800px" }}>
             <div style={{ marginBottom: "40px" }}>
               <div className="section-label">常見問題</div>
