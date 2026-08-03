@@ -148,19 +148,19 @@ const testimonials = [
     label: "企業高階領導人",
     title: "企業高階領導人帶領組織轉化之旅",
     desc: "關鍵數位行銷創辦人謝依如 (RubyHsieh) 是一位業界知名、帶領團隊不斷創新、突破的優秀領導人。她就像是員工和客戶心目中的太陽，總是光芒四射，總是知道自己要什麽，總是為大家指引方向。當每個人都說她很棒、員工都仰望她時，沒有人聽到她內心真正的聲音。一個 CEO，如何突破創業十年的瓶頸？如何找回自己的初心與熱情？",
-    videoId: "2HOcOpbOtGI",
+    videoId: "q77Fx1qVaTA",
   },
   {
     label: "VUCA 時代轉型",
     title: "VUCA時代「思維心態+創新智慧工具+ 專業技能」轉化升級，提升組織與個人競爭力",
     desc: "Lumina Learning Taiwan 專訪四位在組織發展、領導力人才發展的管理顧問創辦人、教練、顧問等專家，分享他們成為 Lumina Spark 企業認證合作夥伴，應用 Lumina 的創新組織與個人發展應用，協助他們與他們的企業客戶組織團隊轉化的旅程！",
-    videoId: "VJTaP6F5VZ0",
+    videoId: "2HOcOpbOtGI",
   },
   {
     label: "企業認證合作夥伴",
     title: "企業認證合作夥伴見證分享",
     desc: "Lumina Learning Taiwan 專訪三位企業高階領導人，分享他們成為 Lumina Spark 企業認證合作夥伴，應用 Lumina 的創新組織與個人發展應用，協助他們與他們的組織團隊轉化的旅程！",
-    videoId: "q77Fx1qVaTA",
+    videoId: "VJTaP6F5VZ0",
     btns: [
       { label: "洽詢認證課", href: "https://docs.google.com/forms/d/e/1FAIpQLSc52OLdFL79IRuhW5DDyYMH7quJsxV5U7yA4_8ZW8nmWs_WDA/viewform", style: "accent" },
       { label: "立即諮詢", href: "https://line.me/R/ti/p/@550ztoml", style: "dark" },
@@ -169,7 +169,7 @@ const testimonials = [
 ];
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState(0);
+  const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
 
   return (
     <>
@@ -804,139 +804,186 @@ export default function HomePage() {
         </section>
 
         {/* ── 客戶見證 ── */}
-        <section style={{ backgroundColor: "#f8f8fa" }} className="section-py">
+        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
-            <div style={{ marginBottom: "32px" }}>
-              <div className="section-label-dark">客戶見證</div>
-            </div>
-
-            {/* Tabs */}
-            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "40px" }}>
-              {testimonials.map((t, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveTab(i)}
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 600,
-                    fontSize: "14px",
-                    padding: "8px 20px",
-                    borderRadius: "100px",
-                    cursor: "pointer",
-                    border: activeTab === i ? "none" : "1px solid #ddd",
-                    background: activeTab === i ? "#221616" : "transparent",
-                    color: activeTab === i ? "#ffffff" : "#555",
-                    transition: "all 0.2s",
-                  }}
-                >
-                  {t.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Active testimonial */}
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                style={{ display: activeTab === i ? "grid" : "none" }}
-                className="about-grid"
+            <div style={{ textAlign: "center", marginBottom: "48px" }}>
+              <span
+                style={{
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(26px, 3vw, 38px)",
+                  color: "#f9bd00",
+                  letterSpacing: "0.06em",
+                }}
               >
-                {/* YouTube embed */}
-                <div style={{ position: "relative", paddingTop: "56.25%" }}>
-                  <iframe
-                    src={`https://www.youtube.com/embed/${t.videoId}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=0`}
-                    title={t.title}
-                    allowFullScreen
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      width: "100%",
-                      height: "100%",
-                      border: "none",
-                      borderRadius: "12px",
-                    }}
-                  />
-                </div>
+                &bull;&nbsp;&nbsp;客戶見證&nbsp;&nbsp;&bull;
+              </span>
+            </div>
 
-                {/* Text */}
-                <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  <h3
-                    style={{
-                      fontFamily: "'Noto Sans', sans-serif",
-                      fontWeight: 700,
-                      fontSize: "clamp(16px, 1.8vw, 22px)",
-                      color: "#221616",
-                      lineHeight: 1.45,
-                      marginBottom: "16px",
-                    }}
-                  >
-                    {t.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: "'Noto Sans', sans-serif",
-                      fontWeight: 400,
-                      fontSize: "15px",
-                      lineHeight: 1.85,
-                      color: "#333",
-                      marginBottom: t.btns ? "24px" : "0",
-                    }}
-                  >
-                    {t.desc}
-                  </p>
-                  {t.btns && (
-                    <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-                      {t.btns.map((btn, bi) => (
-                        <a
-                          key={bi}
-                          href={btn.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={btn.style === "accent" ? "btn-accent" : "btn-dark"}
-                        >
-                          {btn.label}
-                        </a>
-                      ))}
+            {/* Alternating video rows */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "72px" }}>
+              {testimonials.map((t, i) => {
+                const videoLeft = i % 2 === 0;
+                return (
+                  <div key={i} className="about-grid" style={{ backgroundColor: "#ffffff" }}>
+                    {/* Video */}
+                    <div
+                      style={{
+                        order: videoLeft ? 1 : 2,
+                        position: "relative",
+                        borderRadius: "24px",
+                        overflow: "hidden",
+                        aspectRatio: "16/9",
+                      }}
+                    >
+                      {!playingVideos[i] ? (
+                        <>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={`https://i.ytimg.com/vi_webp/${t.videoId}/maxresdefault.webp`}
+                            alt={t.title}
+                            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                          />
+                          <button
+                            onClick={() => setPlayingVideos(prev => ({ ...prev, [i]: true }))}
+                            aria-label="Play"
+                            style={{
+                              position: "absolute",
+                              top: "50%",
+                              left: "50%",
+                              transform: "translate(-50%, -50%)",
+                              width: "68px",
+                              height: "48px",
+                              padding: 0,
+                              border: "none",
+                              background: "transparent",
+                              cursor: "pointer",
+                            }}
+                          >
+                            <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+                              <path
+                                d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                fill="#f00"
+                                fillOpacity="1"
+                              />
+                              <path d="M 45,24 27,14 27,34" fill="#fff" />
+                            </svg>
+                          </button>
+                        </>
+                      ) : (
+                        <iframe
+                          src={`https://www.youtube.com/embed/${t.videoId}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=1`}
+                          title={t.title}
+                          allowFullScreen
+                          style={{
+                            position: "absolute",
+                            inset: 0,
+                            width: "100%",
+                            height: "100%",
+                            border: "none",
+                          }}
+                        />
+                      )}
                     </div>
-                  )}
-                </div>
-              </div>
-            ))}
+
+                    {/* Text */}
+                    <div
+                      style={{
+                        order: videoLeft ? 2 : 1,
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <h3
+                        style={{
+                          fontFamily: "'Noto Sans', sans-serif",
+                          fontWeight: 700,
+                          fontSize: "clamp(18px, 1.8vw, 26px)",
+                          color: "#221616",
+                          lineHeight: 1.6,
+                          letterSpacing: "0.02em",
+                          marginBottom: "20px",
+                        }}
+                      >
+                        {t.title}
+                      </h3>
+                      <p
+                        style={{
+                          fontFamily: "'Noto Sans', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "16px",
+                          lineHeight: 1.8,
+                          letterSpacing: "0.02em",
+                          color: "#333",
+                          marginBottom: t.btns ? "28px" : "0",
+                        }}
+                      >
+                        {t.desc}
+                      </p>
+                      {t.btns && (
+                        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                          {t.btns.map((btn, bi) => (
+                            <a
+                              key={bi}
+                              href={btn.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={btn.style === "accent" ? "btn-accent" : "btn-dark"}
+                            >
+                              {btn.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
         {/* ── 策略合作夥伴 ── */}
         <section style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
-            <div style={{ marginBottom: "48px" }}>
-              <div className="section-label">策略合作夥伴</div>
-            </div>
-            <div className="about-grid">
-              {/* Partner 1 */}
-              <div
+            {/* Gold bullet title */}
+            <div style={{ textAlign: "center", marginBottom: "64px" }}>
+              <span
                 style={{
-                  backgroundColor: "#f8f8fa",
-                  borderRadius: "16px",
-                  padding: "40px",
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(26px, 3vw, 38px)",
+                  color: "#f9bd00",
+                  letterSpacing: "0.06em",
                 }}
               >
-                <div style={{ marginBottom: "20px", height: "60px", display: "flex", alignItems: "center" }}>
+                &bull;&nbsp;&nbsp;策略合作夥伴&nbsp;&nbsp;&bull;
+              </span>
+            </div>
+
+            <div className="about-grid">
+              {/* Partner 1 - 拾田創意 */}
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px" }}>
+                <div style={{ height: "180px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <Image
-                    src={IMGS.partner1}
+                    src="/images/training.jpg"
                     alt="拾田創意"
-                    width={506}
-                    height={206}
-                    style={{ height: "48px", width: "auto", objectFit: "contain" }}
+                    width={2653}
+                    height={1580}
+                    style={{ height: "180px", width: "auto", objectFit: "contain", maxWidth: "100%" }}
                     unoptimized
                   />
                 </div>
                 <h4
                   style={{
                     fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "18px",
+                    fontWeight: 600,
+                    fontSize: "24px",
                     color: "#221616",
-                    marginBottom: "12px",
+                    lineHeight: 1.6,
+                    letterSpacing: "0.02em",
+                    textAlign: "center",
                   }}
                 >
                   拾田創意
@@ -945,40 +992,41 @@ export default function HomePage() {
                   style={{
                     fontFamily: "'Noto Sans', sans-serif",
                     fontWeight: 400,
-                    fontSize: "14px",
-                    lineHeight: 1.85,
+                    fontSize: "15px",
+                    lineHeight: 1.8,
+                    letterSpacing: "0.02em",
                     color: "#333",
+                    textAlign: "center",
                   }}
                 >
-                  拾田創意以「用溫柔的心培育土地與人之間的關係，用行動守護共生的土壤」為宗旨，透過視覺創作、U型理論與前瞻引導，融合社會藝術（敘畫 Scribing 與社會流現劇場 SPT）及生態系統領導力，啟動集體深度對話與共創洞見，滋養永續共生的未來想像。
+                  拾田創意以「用溫柔的心培育土地與人之間的關係，用行動<br />
+                  守護共生的土壤」為宗旨，透過視覺創作、U型理論與前瞻引導，<br />
+                  融合社會藝術（敘畫 Scribing 與社會流現劇場 SPT）及生態系統領導力，<br />
+                  啟動集體深度對話與共創洞見，滋養永續共生的未來想像。
                 </p>
               </div>
 
-              {/* Partner 2 */}
-              <div
-                style={{
-                  backgroundColor: "#f8f8fa",
-                  borderRadius: "16px",
-                  padding: "40px",
-                }}
-              >
-                <div style={{ marginBottom: "20px", height: "60px", display: "flex", alignItems: "center" }}>
+              {/* Partner 2 - 群特管顧 */}
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px" }}>
+                <div style={{ height: "180px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <Image
-                    src={IMGS.partner2}
+                    src="/images/specifique-logo.png"
                     alt="群特管顧"
-                    width={398}
-                    height={300}
-                    style={{ height: "48px", width: "auto", objectFit: "contain" }}
+                    width={1270}
+                    height={960}
+                    style={{ height: "180px", width: "auto", objectFit: "contain", maxWidth: "100%" }}
                     unoptimized
                   />
                 </div>
                 <h4
                   style={{
                     fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "18px",
+                    fontWeight: 600,
+                    fontSize: "24px",
                     color: "#221616",
-                    marginBottom: "12px",
+                    lineHeight: 1.6,
+                    letterSpacing: "0.02em",
+                    textAlign: "center",
                   }}
                 >
                   群特管顧
@@ -987,12 +1035,17 @@ export default function HomePage() {
                   style={{
                     fontFamily: "'Noto Sans', sans-serif",
                     fontWeight: 400,
-                    fontSize: "14px",
-                    lineHeight: 1.85,
+                    fontSize: "15px",
+                    lineHeight: 1.8,
+                    letterSpacing: "0.02em",
                     color: "#333",
+                    textAlign: "center",
                   }}
                 >
-                  組織發展專家 - Specifique 擁有超過 35 年協助企業變革的實務經驗，其獨創的「Dialogmat思考圖™」方法論，擅長將複雜的商業議題轉化，引導團隊以高效的對話，對焦組織議題，進而產出對策與行動。
+                  組織發展專家 - Specifique 擁有超過 35 年協助企業變革的<br />
+                  實務經驗，其獨創的「Dialogmat思考圖™」方法論，<br />
+                  擅長將複雜的商業議題轉化，引導團隊以高效的對話，<br />
+                  對焦組織議題，進而產出對策與行動。
                 </p>
               </div>
             </div>
@@ -1001,71 +1054,67 @@ export default function HomePage() {
 
         {/* ── Bottom CTA ── */}
         <section
-          style={{
-            backgroundColor: "#24201e",
-            position: "relative",
-            overflow: "hidden",
-          }}
+          style={{ backgroundColor: "#24201e" }}
           className="section-py-lg"
         >
-          <div
-            style={{
-              position: "absolute",
-              right: 0,
-              top: 0,
-              bottom: 0,
-              width: "48%",
-              opacity: 0.35,
-            }}
-          >
-            <Image
-              src={IMGS.cta}
-              alt=""
-              fill
-              style={{ objectFit: "cover", objectPosition: "center" }}
-              unoptimized
-            />
-          </div>
-          <div className="container-inner" style={{ position: "relative", zIndex: 2 }}>
+          <div className="container-inner" style={{ textAlign: "center" }}>
+            {/* Logo */}
+            <div style={{ display: "flex", justifyContent: "center", marginBottom: "36px" }}>
+              <Image
+                src="/images/logo.png"
+                alt="illumine COACHING & CONSULTING"
+                width={240}
+                height={96}
+                style={{ height: "80px", width: "auto", objectFit: "contain" }}
+                unoptimized
+              />
+            </div>
+
+            {/* Title - gold */}
             <h2
               style={{
                 fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 900,
-                fontSize: "clamp(24px, 3.5vw, 44px)",
-                color: "#ffffff",
-                lineHeight: 1.3,
-                marginBottom: "24px",
-                maxWidth: "540px",
+                fontWeight: 600,
+                fontSize: "clamp(26px, 3.5vw, 48px)",
+                color: "#f9bd00",
+                lineHeight: 1.4,
+                letterSpacing: "0.02em",
+                marginBottom: "28px",
               }}
             >
-              遇見更好的自己
-              <br />
-              與更有默契的團隊
+              遇見更好的自己與更有默契的團隊
             </h2>
-            <p
+
+            {/* Description */}
+            <div
               style={{
                 fontFamily: "'Noto Sans', sans-serif",
                 fontWeight: 400,
-                fontSize: "15px",
-                lineHeight: 1.85,
-                color: "rgba(255,255,255,0.8)",
-                marginBottom: "36px",
-                maxWidth: "480px",
+                fontSize: "clamp(15px, 1.4vw, 20px)",
+                lineHeight: 1.4,
+                letterSpacing: "0.02em",
+                color: "#ffffff",
+                marginBottom: "40px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0",
               }}
             >
-              透過科學化的人格分析工具，協助團隊成員看見自己與他人的行為風格，
-              提升溝通效率、合作默契與領導效能。
-              不論是組織成長、人才發展或部門共識建立，都是一場值得投資的旅程，
-              現在就讓我們一起開始！
-            </p>
+              <p>透過科學化的人格分析工具，協助團隊成員看見自己與他人的行為風格，</p>
+              <p>提升溝通效率、合作默契與領導效能。</p>
+              <p>不論是組織成長、人才發展或部門共識建立，都是一場值得投資的旅程，</p>
+              <p>現在就讓我們一起開始！</p>
+            </div>
+
+            {/* Button */}
             <a
-              href="https://line.me/R/ti/p/@550ztoml"
+              href="https://lin.ee/4hHDypS"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-accent"
-              style={{ fontSize: "16px", padding: "12px 32px" }}
+              style={{ fontSize: "16px", padding: "12px 36px", fontWeight: 600 }}
             >
-              立即諮詢
+              立即諮詢&nbsp;&nbsp;›
             </a>
           </div>
         </section>
