@@ -16,7 +16,7 @@ const products = [
     img: I("ll-spark.png"),
     imgW: 846, imgH: 444,
     link: "https://weekielife.com/blog/lumina-learning-tools-overview",
-    color: "#f9bd00",
+    color: "rgb(241, 131, 38)",
   },
   {
     id: "team",
@@ -26,7 +26,7 @@ const products = [
     img: I("ll-team.png"),
     imgW: 846, imgH: 444,
     link: "https://weekielife.com/blog/lumina-learning-tools-overview",
-    color: "#4CAF50",
+    color: "rgb(8, 177, 169)",
   },
   {
     id: "leader",
@@ -36,7 +36,7 @@ const products = [
     img: I("ll-leader.png"),
     imgW: 846, imgH: 444,
     link: "https://weekielife.com/blog/lumina-learning-tools-overview",
-    color: "#9C27B0",
+    color: "rgb(39, 164, 221)",
   },
   {
     id: "sales",
@@ -46,7 +46,7 @@ const products = [
     img: I("ll-sales.png"),
     imgW: 834, imgH: 444,
     link: "https://weekielife.com/blog/lumina-learning-tools-overview",
-    color: "#2196F3",
+    color: "rgb(210, 27, 35)",
   },
   {
     id: "emotion",
@@ -56,7 +56,7 @@ const products = [
     img: I("ll-emotion.png"),
     imgW: 928, imgH: 444,
     link: "https://weekielife.com/blog/lumina-learning-tools-overview",
-    color: "#FF5722",
+    color: "rgb(165, 88, 164)",
   },
   {
     id: "select",
@@ -66,7 +66,7 @@ const products = [
     img: I("ll-select.png"),
     imgW: 926, imgH: 514,
     link: "https://weekielife.com/blog/lumina-learning-tools-overview",
-    color: "#607D8B",
+    color: "rgb(19, 94, 159)",
   },
 ];
 
@@ -335,89 +335,219 @@ export default function LuminaLearningPage() {
                   unoptimized
                 />
               </div>
-            ) : (
-              tabContent.slice(1).map((tab, i) => (
-                <div
-                  key={i + 1}
-                  style={{ display: activeTab === i + 1 ? "grid" : "none" }}
-                  className="ll-two-col"
-                >
-                  <div>
-                    {tab.content.split("\n\n").map((para, pi) => (
-                      <p
-                        key={pi}
-                        style={{
-                          fontFamily: "'Noto Sans', sans-serif",
-                          fontWeight: pi === 0 ? 700 : 400,
-                          fontSize: pi === 0 ? "17px" : "15px",
-                          lineHeight: 1.85,
-                          color: "#221616",
-                          marginBottom: "20px",
-                          whiteSpace: "pre-line",
-                        }}
-                      >
-                        {para}
-                      </p>
-                    ))}
-                  </div>
-                  <div style={{ borderRadius: "16px", overflow: "hidden", aspectRatio: "1/1", position: "relative" }}>
-                    <Image src={tab.img} alt={tab.label} fill style={{ objectFit: "cover" }} unoptimized />
-                  </div>
+            ) : activeTab === 1 ? (
+              /* 理論基礎 custom layout */
+              <div>
+                {/* Title */}
+                <p style={{
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "24px",
+                  color: "#221616",
+                  letterSpacing: "0.02em",
+                  lineHeight: 1.6,
+                  textAlign: "center",
+                  marginBottom: "24px",
+                }}>
+                  學理依據
+                </p>
+
+                {/* Text block */}
+                <div style={{
+                  textAlign: "center",
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontSize: "18px",
+                  letterSpacing: "0.02em",
+                  lineHeight: 1.8,
+                  marginBottom: "56px",
+                }}>
+                  <p style={{ color: "#333333", marginBottom: "24px" }}>
+                    Lumina Spark 立基於最近代的 Big 5 大五人格模型，融合「榮格 Jung」人格理論的視角，建構一個兩極對稱、完整平衡的人格特質立體模型，個別測量每個特質的矛盾兩極，經過心理計量統計實證研究，大大降低受測者認知偏見造成的結果偏差。
+                  </p>
+                  <p style={{ color: "#221616" }}>
+                    Lumina Spark 有別於傳統將人「分類」的測評工具，提出「不分類」及「情境」的觀點理論，具體清晰地詮釋人格的複雜性、細緻性、矛盾性、個體差異性，去除「分類」造成的偏見與誤趨，是最近代、創新的人格特質心理學應用模型。
+                  </p>
                 </div>
-              ))
+
+                {/* Two wheel images */}
+                <div style={{ display: "flex", gap: "48px", justifyContent: "center", flexWrap: "wrap" }}>
+                  {[
+                    { src: "/images/ll-spark-jung.png", label: "Lumina Spark V.S 榮格" },
+                    { src: "/images/ll-spark-big5.png", label: "Lumina Spark V.S 大五" },
+                  ].map((item) => (
+                    <div key={item.label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px" }}>
+                      <Image
+                        src={item.src}
+                        alt={item.label}
+                        width={300}
+                        height={300}
+                        style={{ width: "300px", height: "300px", objectFit: "cover" }}
+                        unoptimized
+                      />
+                      <p style={{
+                        fontFamily: "'Noto Sans', sans-serif",
+                        fontSize: "16px",
+                        color: "#333333",
+                        letterSpacing: "0.02em",
+                        lineHeight: 1.8,
+                      }}>
+                        {item.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              /* 主張價值 custom layout */
+              <div style={{ display: "flex", flexDirection: "column", gap: "48px" }}>
+                {/* Text */}
+                <div>
+                  <p style={{
+                    fontFamily: "'Noto Sans', sans-serif",
+                    fontWeight: 700,
+                    fontSize: "28px",
+                    color: "#221616",
+                    letterSpacing: "0.02em",
+                    lineHeight: 1.8,
+                    marginBottom: "32px",
+                  }}>
+                    &ldquo;No more labelling or putting people into boxes.&rdquo;
+                  </p>
+
+                  {[
+                    {
+                      title: 'No "TYPE" but "TRAITS"',
+                      body: '我們對人「不分類」，去標籤化，強調每個人都是獨一無二，主張「個體性差異的特質展現」，支持個人及團隊適性發展。',
+                      bodyColor: "#333333",
+                    },
+                    {
+                      title: "Embrace the Paradox",
+                      body: '在問卷設計，個別測量特質的兩極，避免錯誤的二分法造成的偏差。我們不會把你歸類為外向或內向的人、思考型或是情感型的人，而是完整、個別呈現出每個人內向、外向及其他矛盾、多元面向特質，擁抱個人與他人的矛盾不同，和諧共存，互補融合。',
+                      bodyColor: "#333333",
+                    },
+                    {
+                      title: "Persona",
+                      body: '每個人的特質與行為會因對象、情境動態改變，我們能協助您透視個人與團隊在「潛在」、「日常」、「壓力」情境的行為慣性及動態變化，挖掘潛能、預測壓力下的決策風險。',
+                      bodyColor: "#221616",
+                    },
+                    {
+                      title: "Growth Mindset",
+                      body: "我們相信，人無法被定性，每個人的發展充滿無限可能！透過了解自己，打破框架，發展成為自己想要的版本，成就獨一無二的自己！",
+                      bodyColor: "#333333",
+                    },
+                  ].map((item) => (
+                    <div key={item.title} style={{ marginBottom: "28px" }}>
+                      <p style={{
+                        fontFamily: "'Noto Sans', sans-serif",
+                        fontWeight: 500,
+                        fontSize: "20px",
+                        color: "#221616",
+                        letterSpacing: "0.02em",
+                        lineHeight: 1.8,
+                      }}>
+                        {item.title}
+                      </p>
+                      <p style={{
+                        fontFamily: "'Noto Sans', sans-serif",
+                        fontSize: "18px",
+                        color: item.bodyColor,
+                        letterSpacing: "0.02em",
+                        lineHeight: 1.8,
+                      }}>
+                        {item.body}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom: image */}
+                <div>
+                  <Image
+                    src="/images/ll-tab3-values.png"
+                    alt="Lumina Spark portraits"
+                    width={1674}
+                    height={1096}
+                    style={{ width: "70%", height: "auto", display: "block", margin: "0 auto" }}
+                    unoptimized
+                  />
+                </div>
+              </div>
             )}
           </div>
         </section>
 
         {/* ── 多元應用情境 ── */}
-        <section style={{ backgroundColor: "#f8f8fa" }} className="section-py">
+        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
-            <div style={{ marginBottom: "16px" }}>
-              <div className="section-label">多元應用情境</div>
+            {/* Section label */}
+            <div style={{ textAlign: "center", marginBottom: "32px" }}>
+              <span style={{
+                fontFamily: "'Noto Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(27px, 3vw, 48px)",
+                color: "#f9bd00",
+                letterSpacing: "0.02em",
+                lineHeight: 1.6,
+              }}>
+                &bull;&nbsp;&nbsp;多元應用情境&nbsp;&nbsp;&bull;
+              </span>
             </div>
-            <h2
-              style={{
+
+            {/* Quote block */}
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <p style={{
                 fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 900,
-                fontSize: "clamp(20px, 2.5vw, 32px)",
+                fontWeight: 700,
+                fontSize: "24px",
                 color: "#221616",
-                lineHeight: 1.3,
-                marginBottom: "8px",
-              }}
-            >
-              Transforming Organizations by Transforming People.
-            </h2>
-            <p
-              style={{
+                letterSpacing: "0.02em",
+                lineHeight: 1.6,
+              }}>
+                Transforming Organizations by Transforming People.
+              </p>
+              <p style={{
                 fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 600,
-                fontSize: "16px",
-                color: "#333",
+                fontWeight: 700,
+                fontSize: "24px",
+                color: "#221616",
+                letterSpacing: "0.02em",
+                lineHeight: 1.6,
+              }}>
+                從人的發展與轉化，帶動組織的發展與轉化。
+              </p>
+            </div>
+
+            {/* Text */}
+            <div style={{ textAlign: "center", marginBottom: "48px" }}>
+              <p style={{
+                fontFamily: "'Noto Sans', sans-serif",
+                fontSize: "18px",
+                color: "#221616",
+                letterSpacing: "0.02em",
+                lineHeight: 1.8,
                 marginBottom: "24px",
-              }}
-            >
-              從人的發展與轉化，帶動組織的發展與轉化。
-            </p>
-            <p
-              style={{
+              }}>
+                企業可應用 Lumina Learning 多元完整、一致性、系統化的工具與方法，建構組織內共同的語言、形塑文化和價值觀。
+              </p>
+              <p style={{
                 fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 400,
-                fontSize: "15px",
-                lineHeight: 1.85,
-                color: "#333",
-                marginBottom: "40px",
-                maxWidth: "840px",
-              }}
-            >
-              企業可應用 Lumina Learning 多元完整、一致性、系統化的工具與方法，建構組織內共同的語言、形塑文化和價值觀。可應用於組織人力資源的盤點、佈局、規劃，新事業部、專案團隊或組織重整人才配置模擬，關鍵人才 / 接班人的遴選與培育發展，使團隊融合、凝聚、溝通、協作性提升，領導人自我覺察力、領導力、溝通力、教練力提升，透過「個人」與「團隊」的持續學習發展，推動企業組織的創新、轉型、升級！
-            </p>
-            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                fontSize: "18px",
+                color: "#221616",
+                letterSpacing: "0.02em",
+                lineHeight: 1.8,
+              }}>
+                可應用於組織人力資源的盤點、佈局、規劃，新事業部、專案團隊或組織重整人才配置模擬，關鍵人才 / 接班人的遴選與培育發展，使團隊融合、凝聚、溝通、協作性提升，領導人自我覺察力、領導力、溝通力、教練力提升，透過「個人」與「團隊」的持續學習發展，推動企業組織的創新、轉型、升級！
+              </p>
+            </div>
+
+            {/* Image centered below text */}
+            <div style={{ display: "flex", justifyContent: "center" }}>
               <Image
-                src={I("ll-applications.png")}
-                alt="多元應用情境"
-                width={1330}
-                height={560}
-                style={{ width: "100%", height: "auto", display: "block" }}
+                src="/images/ll-context.png"
+                alt="Lumina Learning 在企業組織的成功應用"
+                width={1242}
+                height={1236}
+                style={{ width: "clamp(260px, 50%, 500px)", height: "auto", display: "block" }}
                 unoptimized
               />
             </div>
@@ -427,107 +557,105 @@ export default function LuminaLearningPage() {
         {/* ── 解決方案：全系列 ── */}
         <section id="products" style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
-            <div style={{ marginBottom: "16px" }}>
-              <h2
-                style={{
-                  fontFamily: "'Noto Sans', sans-serif",
-                  fontWeight: 900,
-                  fontSize: "clamp(20px, 2.5vw, 32px)",
-                  color: "#221616",
-                  lineHeight: 1.3,
-                  marginBottom: "16px",
-                }}
-              >
-                解決方案：Lumina Learning 全系列服務工具
-              </h2>
-            </div>
-            <p
-              style={{
+            <div style={{ textAlign: "center", marginBottom: "32px" }}>
+              <span style={{
                 fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 400,
-                fontSize: "15px",
-                lineHeight: 1.85,
-                color: "#333",
-                marginBottom: "56px",
-                maxWidth: "840px",
-              }}
-            >
+                fontWeight: 700,
+                fontSize: "clamp(27px, 3vw, 48px)",
+                color: "#f9bd00",
+                letterSpacing: "0.02em",
+                lineHeight: 1.6,
+              }}>
+                &bull;&nbsp;&nbsp;解決方案：Lumina Learning 全系列服務工具&nbsp;&nbsp;&bull;
+              </span>
+            </div>
+            {/* Intro text */}
+            <p style={{
+              fontFamily: "'Noto Sans', sans-serif",
+              fontSize: "18px",
+              lineHeight: 1.8,
+              color: "#555555",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              marginBottom: "56px",
+            }}>
               我們提供 Lumina Spark、Lumina Team、Lumina Leader、Lumina Sales、Lumina Emotion、Lumina Select 等涵蓋組織、團隊與個人，從招募到發展的完整多元應用工具，包括測評及結合實體、線上與數位化的學習發展應用工具。
             </p>
 
-            {/* Products */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "72px" }}>
-              {products.map((p, i) => (
-                <div
-                  key={p.id}
-                  className="ll-svc-row"
-                  data-imgright={i % 2 === 0 ? "true" : "false"}
-                >
-                  {/* Text */}
-                  <div className="ll-svc-text">
-                    <h3
-                      style={{
-                        fontFamily: "'Noto Sans', sans-serif",
-                        fontWeight: 700,
-                        fontSize: "clamp(18px, 2vw, 24px)",
-                        color: "#221616",
-                        lineHeight: 1.3,
-                        marginBottom: "4px",
-                      }}
-                    >
-                      {p.name}
-                    </h3>
-                    <p
-                      style={{
-                        fontFamily: "'Noto Sans', sans-serif",
-                        fontWeight: 600,
-                        fontSize: "15px",
-                        color: "#555",
-                        marginBottom: "16px",
-                      }}
-                    >
-                      {p.tag}
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: "'Noto Sans', sans-serif",
-                        fontWeight: 400,
-                        fontSize: "15px",
-                        lineHeight: 1.85,
-                        color: "#333",
-                        marginBottom: "24px",
-                      }}
-                    >
-                      {p.desc}
-                    </p>
-                    <a
-                      href={p.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-dark"
-                    >
-                      了解更多
-                    </a>
-                  </div>
-
-                  {/* Image */}
-                  <div
-                    className="ll-svc-img"
-                    style={{
-                      borderRadius: "12px",
-                      overflow: "hidden",
-                      aspectRatio: `${p.imgW}/${p.imgH}`,
-                    }}
-                  >
+            {/* Products 3-column grid */}
+            <div className="products-grid">
+              {products.map((p) => (
+                <div key={p.id} style={{ display: "flex", flexDirection: "column" }}>
+                  {/* Logo image */}
+                  <div style={{ marginBottom: "20px", height: "160px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <Image
                       src={p.img}
                       alt={p.name}
                       width={p.imgW}
                       height={p.imgH}
-                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      style={{ width: "100%", height: "100%", objectFit: "contain" }}
                       unoptimized
                     />
                   </div>
+                  {/* Product name */}
+                  <p style={{
+                    fontFamily: "'Noto Sans', sans-serif",
+                    fontWeight: 400,
+                    fontSize: "16px",
+                    color: "#221616",
+                    letterSpacing: "0.02em",
+                    lineHeight: 1.8,
+                    marginBottom: "4px",
+                  }}>
+                    {p.name}
+                  </p>
+                  {/* Tag */}
+                  <p style={{
+                    fontFamily: "'Noto Sans', sans-serif",
+                    fontWeight: 700,
+                    fontSize: "22px",
+                    color: p.color,
+                    letterSpacing: "0.02em",
+                    lineHeight: 1.4,
+                    marginBottom: "12px",
+                  }}>
+                    {p.tag}
+                  </p>
+                  {/* Description */}
+                  <p style={{
+                    fontFamily: "'Noto Sans', sans-serif",
+                    fontSize: "15px",
+                    color: "#333333",
+                    letterSpacing: "0.02em",
+                    lineHeight: 1.8,
+                    marginBottom: "20px",
+                    flex: 1,
+                  }}>
+                    {p.desc}
+                  </p>
+                  {/* Button */}
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      backgroundColor: "#f9bd00",
+                      color: "#221616",
+                      fontFamily: "'Noto Sans', sans-serif",
+                      fontWeight: 600,
+                      fontSize: "14px",
+                      letterSpacing: "0.02em",
+                      padding: "10px 24px",
+                      borderRadius: "200px",
+                      textDecoration: "none",
+                      alignSelf: "flex-start",
+                    }}
+                  >
+                    了解更多 ›
+                  </a>
                 </div>
               ))}
             </div>
@@ -535,15 +663,28 @@ export default function LuminaLearningPage() {
         </section>
 
         {/* ── 3層架構 ── */}
-        <section style={{ backgroundColor: "#f8f8fa" }} className="section-py">
+        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner">
+            {/* Image first */}
+            <div style={{ borderRadius: "12px", overflow: "hidden", marginBottom: "40px" }}>
+              <Image
+                src={I("ll-3layers.png")}
+                alt="3層架構交叉3種情境"
+                width={1500}
+                height={896}
+                style={{ width: "100%", height: "auto", display: "block" }}
+                unoptimized
+              />
+            </div>
+            {/* Title + description below */}
             <h2
               style={{
                 fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 900,
-                fontSize: "clamp(20px, 2.5vw, 32px)",
-                color: "#221616",
-                lineHeight: 1.3,
+                fontWeight: 700,
+                fontSize: "28px",
+                color: "#f9bd00",
+                letterSpacing: "0.02em",
+                lineHeight: 1.6,
                 marginBottom: "16px",
               }}
             >
@@ -552,26 +693,14 @@ export default function LuminaLearningPage() {
             <p
               style={{
                 fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 400,
-                fontSize: "15px",
-                lineHeight: 1.85,
-                color: "#333",
-                marginBottom: "40px",
-                maxWidth: "760px",
+                fontSize: "18px",
+                lineHeight: 1.8,
+                color: "#333333",
+                letterSpacing: "0.02em",
               }}
             >
               透視每個人 24 個特質、8 個維度、4 個顏色能量在「潛在」、「日常」、「壓力下」情境的展現動態、慣性以及個人發展的優勢、機會、盲點、風險，提升自我覺察與自我發展的意識。
             </p>
-            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-              <Image
-                src={I("ll-3layers.png")}
-                alt="3層架構交叉3種情境"
-                width={1748}
-                height={1412}
-                style={{ width: "100%", height: "auto", display: "block" }}
-                unoptimized
-              />
-            </div>
           </div>
         </section>
 
@@ -583,42 +712,35 @@ export default function LuminaLearningPage() {
                 <h2
                   style={{
                     fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 900,
-                    fontSize: "clamp(20px, 2.5vw, 32px)",
-                    color: "#221616",
-                    lineHeight: 1.3,
+                    fontWeight: 700,
+                    fontSize: "28px",
+                    color: "#f9bd00",
+                    letterSpacing: "0.02em",
+                    lineHeight: 1.6,
                     marginBottom: "20px",
                   }}
                 >
-                  獨一無二特質肖像，
-                  <br />
-                  個人化發展指南！
+                  獨一無二特質肖像，個人化發展指南！
                 </h2>
                 <p
                   style={{
                     fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "15px",
-                    lineHeight: 1.85,
-                    color: "#333",
+                    fontSize: "18px",
+                    lineHeight: 1.8,
+                    color: "#333333",
+                    letterSpacing: "0.02em",
                   }}
                 >
                   專屬於您、獨一無二的個人特質肖像 (Portrait)，完整呈現出您在不同情境的樣貌，並提供您在溝通、領導、與相似相異的人共事、特質調適發展的具體、個人化建議。
                 </p>
               </div>
-              <div
-                style={{
-                  borderRadius: "16px",
-                  overflow: "hidden",
-                  position: "relative",
-                  aspectRatio: "1930/1444",
-                }}
-              >
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <Image
                   src={I("ll-portrait.png")}
                   alt="個人化特質肖像"
-                  fill
-                  style={{ objectFit: "cover" }}
+                  width={1102}
+                  height={900}
+                  style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
                   unoptimized
                 />
               </div>
