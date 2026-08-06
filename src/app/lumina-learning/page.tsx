@@ -186,13 +186,12 @@ export default function LuminaLearningPage() {
       <Header />
       <main>
         {/* ── Hero ── */}
-        <section style={{ width: "100%", overflow: "hidden", lineHeight: 0 }}>
+        <section style={{ width: "100%", position: "relative", aspectRatio: "2558 / 1124", maxHeight: "600px", overflow: "hidden" }}>
           <Image
             src="/images/ll-hero-bright.jpg"
             alt="Lumina Learning"
-            width={2558}
-            height={1124}
-            style={{ width: "100%", height: "auto", display: "block" }}
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
             priority
             unoptimized
           />
