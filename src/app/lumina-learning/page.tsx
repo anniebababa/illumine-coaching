@@ -74,32 +74,27 @@ const targets = [
   {
     title: "部門主管、單位領導人",
     desc: "提升識才、用才、育才、留才及與跨世代、跨專業的多元特質組合團隊適性溝通、適性領導的能力，建立自主、當責的高績效團隊。",
-    img: I("ll-target1.png"),
-    imgW: 964, imgH: 1460,
+    img: "https://framerusercontent.com/images/q4pOJoYythmvEif9MBnPeL0XI.png",
   },
   {
     title: "HR / HRBP 專業人員",
     desc: "提升選才、培訓、人力資源策略佈局與發展能力，促進組織團隊與個人適性學習與發展及溝通、協作效能。",
-    img: I("ll-target2.png"),
-    imgW: 982, imgH: 514,
+    img: "https://framerusercontent.com/images/VxTMdvlzYP92gB9dfNIkinWtzHU.png",
   },
   {
     title: "專案與跨部門團隊",
     desc: "促進團隊多元融合，減少衝突卡關，建立團隊信任，凝聚行爲共識。",
-    img: I("ll-target3.png"),
-    imgW: 1500, imgH: 896,
+    img: "https://framerusercontent.com/images/uYkYYnqyGOgLjVFU1mcEb6d8seg.png",
   },
   {
     title: "Sales 業務主管與團隊",
     desc: "更懂客戶與夥伴行為、提升成交率；建立信任與有效對話的能力，激勵團隊士氣與提升業績。",
-    img: I("ll-target4.png"),
-    imgW: 991, imgH: 579,
+    img: "https://framerusercontent.com/images/1mzcbEDBHH7IqwHS1pxDvwYq0Q.png",
   },
   {
     title: "創辦人、總經理、CXO",
     desc: "建立高效的領導團隊與文化，用科學數據支持決策；發展接班梯隊，實現長期策略目標",
-    img: I("ll-target5.png"),
-    imgW: 1200, imgH: 1200,
+    img: "https://framerusercontent.com/images/jh2CgbWCp8fZ6MR7JOvoc6Waqfw.png",
   },
 ];
 
@@ -115,40 +110,41 @@ const certBenefits = [
 ];
 
 const certBonus = [
-  "Spark coach / JTC 線上教練系統",
-  "Lumina Team 團隊動態模擬器",
-  "Lumina Learning HQ 全球學習資源 Premium 帳戶一年",
-  "專業版 APP 使用",
-  "Start Up 315 點",
-  "Lumina Learning 線上學習活動",
-  "原廠直購優惠",
-  "自主雲端管理系統",
+  { line1: "Spark coach / JTC", line2: "線上教練系統", img: "https://framerusercontent.com/images/gDU1egyyXgtXw1nbefDy1zFMw.png", fit: "cover" as const, pos: "right center" },
+  { line1: "Lumina Team", line2: "團隊動態模擬器", img: "https://framerusercontent.com/images/j4LlZ2KroaL0Jd84UmECodLxnM.png", fit: "cover" as const, pos: "center" },
+  { line1: "Lumina Learning HQ", line2: "全球學習資源", img: "https://framerusercontent.com/images/PLCHGpz6eN0ts0m0Fa9qVse5o2E.png", fit: "contain" as const, pos: "center" },
+  { line1: "Premium", line2: "帳戶一年", img: "https://framerusercontent.com/images/0F4OVsSmeKLYUCfCcgly4aCZ2SY.png", fit: "contain" as const, pos: "center" },
+  { line1: "專業版 APP 使用", line2: "", img: "https://framerusercontent.com/images/lrtPwd9lIPU8xAENetoZYuNZX0.png", fit: "cover" as const, pos: "center" },
+  { line1: "Start Up 315 點", line2: "", img: "https://framerusercontent.com/images/YIgIO590P6TMXmCVuYHJv8DJy1U.png", fit: "contain" as const, pos: "center" },
+  { line1: "原廠直購優惠", line2: "", img: "https://framerusercontent.com/images/NSH2um5HBjMsbuYI97pt4ImkcM.png", fit: "cover" as const, pos: "center" },
+  { line1: "自主雲端管理系統", line2: "", img: "https://framerusercontent.com/images/ei5kgG5ZJBWlKYTaUaEsXnY1k0.png", fit: "cover" as const, pos: "center" },
+  { line1: "Lumina Learning", line2: "線上學習活動", img: "https://framerusercontent.com/images/UOzMhCv1GoqV7m7ZRFx3TsAw8wI.png", fit: "cover" as const, pos: "center" },
 ];
 
 const faqs = [
   {
     q: "Lumina Spark 跟其他性格測驗有什麼不同？",
-    a: "Lumina Spark 打破傳統性格測驗「定型化」的限制，不將人貼上固定標籤。它以動態、視覺化的方式呈現每個人在「潛在」、「日常」、「壓力下」三種情境下的差異，並提供 24 個特質的個人化分析，更真實地反映人的多元面貌。",
+    a: "Lumina Spark 結合了心理學的大五人格理論與四色能量模型，強調「特質（Trait）」而非「類型（Type）」，避免將人貼上固定標籤。它獨特之處在於能同時測量個體三種人格狀態——自然傾向、日常表現與壓力下行為，幫助你看到自己在不同情境下的轉變。相較於 MBTI、DISC 等工具，Lumina 提供更多層次的資訊，也能展現一個人看似矛盾但實際共存的性格特質，讓自我覺察更真實、更立體。",
   },
   {
     q: "做完 Lumina 測驗後會得到什麼？",
-    a: "完成測驗後，您將獲得一份專屬的個人特質肖像（Portrait），包含您在 24 個特質面向的動態分析、溝通風格建議、領導力發展建議，以及與不同特質的人相處的具體指南。",
+    a: "完成 Lumina Spark 測評後，你會獲得一份專屬的個人肖像報告，詳列你在 24 項性格特質上的自然傾向、日常行為與壓力反應，並搭配四色能量圖像幫助理解。你也可以選擇參加一對一解析，進一步由認證執行師協助解讀報告，探索你的潛力、溝通風格、優勢與可能的盲點。這份報告不僅適用於個人成長，也能作為職涯規劃、團隊協作與領導風格調整的參考依據。",
   },
   {
     q: "Lumina 適合什麼樣的人使用？",
-    a: "Lumina 系列工具適合所有希望提升自我覺察與人際溝通的人，無論是企業主管、HR、團隊成員，還是教練、顧問都能從中獲益。Lumina Spark 特別適合希望了解自己和團隊特質、促進溝通與協作的組織。",
+    a: "Lumina Spark 適用於各種年齡層與職業身份。無論你是想更認識自己、改善人際關係的個人，或是想提升團隊效能的主管、HR、人資顧問、教練與培訓師，都能從中獲得具體幫助。對於企業來說，它能協助團隊溝通對齊、增進理解與協作；對個人來說，則是一面照見內在動力與特質的鏡子，是人生各階段的重要導航工具。",
   },
   {
     q: "Lumina 能幫助企業什麼？",
-    a: "Lumina 能幫助企業建立共同語言與文化、優化人才招募與發展、提升領導力與團隊效能、促進跨部門溝通與協作、規劃接班人培育計劃，以及推動組織文化轉型。",
+    a: "Lumina Spark 不只是一份性格測評工具，更是一套實用的企業人才發展方案。它能幫助企業識別團隊成員的溝通風格與合作偏好，找出團隊運作的盲點與潛力。透過報告與互動工作坊，可促進部門間理解與協作、改善溝通效率、提升領導力與團隊凝聚力。此外，也可搭配 Lumina Leader、Team 或 Sales 模組，依據企業需求進行領導發展、團隊共創或銷售強化。",
   },
   {
     q: "成為 Lumina Spark 認證執行師後，可以做什麼？對我有什麼幫助？",
-    a: "取得認證後，您將獲得原廠技術授權，可在企業內部或外部推廣應用 Lumina 工具。您能獨立帶領工作坊、提供一對一教練諮詢、協助企業進行人才發展規劃，並享有持續更新的全球學習資源與在地技術支援。",
+    a: "完成認證班後，你將成為具備授權資格的 Lumina Spark 執行師，能夠為個人或團體進行測評說明、報告解析與教練式回饋，並可應用於一對一職涯對談、團隊建立、溝通訓練、領導力發展、人才評鑑等場景。這項資格特別適合 HR、教練、顧問、培訓師、企業內部主管與高階管理者，不僅能為你的服務增加專業工具，也能提升你與客戶或團隊成員對話的深度與影響力。執行師的培訓內容不只是工具操作，更強調如何引導對話與啟發行動，讓你能帶出有價值的改變。",
   },
   {
     q: "執行師認證課程會學到哪些內容？需要具備什麼背景嗎？",
-    a: "課程涵蓋 Lumina Spark 完整理論框架、評測報告解讀與應用、工作坊帶領技巧、教練對話技術，以及數位工具操作。不需要特定的專業背景，只要對人才發展與組織學習有熱情的人都可以參與。",
+    a: "認證課程為期約 2～3 天，內容涵蓋 Lumina Spark 背後的理論基礎、測評結構與解讀技巧、報告應用方式，以及進行個別或團體回饋的實作演練。課程設計強調實務導向，即使你沒有心理學背景，也能在專業指導下學會如何操作工具與帶領對話。我們歡迎來自不同領域的夥伴報名，特別是 HR、教練、顧問、教育訓練從業者、團隊領導者與創業者。重點是你願意深入了解人、擁有對學習與引導成長的熱情。",
   },
 ];
 
@@ -209,7 +205,7 @@ export default function LuminaLearningPage() {
               style={{
                 fontFamily: "'Noto Sans', sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(27px, 3vw, 48px)",
+                fontSize: "clamp(22px, 2.4vw, 38px)",
                 color: "#f9bd00",
                 letterSpacing: "0.02em",
                 lineHeight: 1.6,
@@ -410,6 +406,7 @@ export default function LuminaLearningPage() {
                     letterSpacing: "0.02em",
                     lineHeight: 1.8,
                     marginBottom: "32px",
+                    textAlign: "center",
                   }}>
                     &ldquo;No more labelling or putting people into boxes.&rdquo;
                   </p>
@@ -484,7 +481,7 @@ export default function LuminaLearningPage() {
               <span style={{
                 fontFamily: "'Noto Sans', sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(27px, 3vw, 48px)",
+                fontSize: "clamp(22px, 2.4vw, 38px)",
                 color: "#f9bd00",
                 letterSpacing: "0.02em",
                 lineHeight: 1.6,
@@ -517,39 +514,39 @@ export default function LuminaLearningPage() {
               </p>
             </div>
 
-            {/* Text */}
-            <div style={{ textAlign: "center", marginBottom: "48px" }}>
-              <p style={{
-                fontFamily: "'Noto Sans', sans-serif",
-                fontSize: "18px",
-                color: "#221616",
-                letterSpacing: "0.02em",
-                lineHeight: 1.8,
-                marginBottom: "24px",
-              }}>
-                企業可應用 Lumina Learning 多元完整、一致性、系統化的工具與方法，建構組織內共同的語言、形塑文化和價值觀。
-              </p>
-              <p style={{
-                fontFamily: "'Noto Sans', sans-serif",
-                fontSize: "18px",
-                color: "#221616",
-                letterSpacing: "0.02em",
-                lineHeight: 1.8,
-              }}>
-                可應用於組織人力資源的盤點、佈局、規劃，新事業部、專案團隊或組織重整人才配置模擬，關鍵人才 / 接班人的遴選與培育發展，使團隊融合、凝聚、溝通、協作性提升，領導人自我覺察力、領導力、溝通力、教練力提升，透過「個人」與「團隊」的持續學習發展，推動企業組織的創新、轉型、升級！
-              </p>
-            </div>
-
-            {/* Image centered below text */}
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <Image
-                src="/images/ll-context.png"
-                alt="Lumina Learning 在企業組織的成功應用"
-                width={1242}
-                height={1236}
-                style={{ width: "clamp(260px, 50%, 500px)", height: "auto", display: "block" }}
-                unoptimized
-              />
+            {/* Text + Image row */}
+            <div style={{ display: "flex", alignItems: "center", gap: "48px", flexWrap: "wrap" }}>
+              <div style={{ flex: "1 1 320px" }}>
+                <p style={{
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontSize: "18px",
+                  color: "#221616",
+                  letterSpacing: "0.02em",
+                  lineHeight: 1.8,
+                  marginBottom: "24px",
+                }}>
+                  企業可應用 Lumina Learning 多元完整、一致性、系統化的工具與方法，建構組織內共同的語言、形塑文化和價值觀。
+                </p>
+                <p style={{
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontSize: "18px",
+                  color: "#221616",
+                  letterSpacing: "0.02em",
+                  lineHeight: 1.8,
+                }}>
+                  可應用於組織人力資源的盤點、佈局、規劃，新事業部、專案團隊或組織重整人才配置模擬，關鍵人才 / 接班人的遴選與培育發展，使團隊融合、凝聚、溝通、協作性提升，領導人自我覺察力、領導力、溝通力、教練力提升，透過「個人」與「團隊」的持續學習發展，推動企業組織的創新、轉型、升級！
+                </p>
+              </div>
+              <div style={{ flex: "0 0 auto" }}>
+                <Image
+                  src="/images/ll-context.png"
+                  alt="Lumina Learning 在企業組織的成功應用"
+                  width={1242}
+                  height={1236}
+                  style={{ width: "clamp(220px, 35vw, 420px)", height: "auto", display: "block" }}
+                  unoptimized
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -561,7 +558,7 @@ export default function LuminaLearningPage() {
               <span style={{
                 fontFamily: "'Noto Sans', sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(27px, 3vw, 48px)",
+                fontSize: "clamp(22px, 2.4vw, 38px)",
                 color: "#f9bd00",
                 letterSpacing: "0.02em",
                 lineHeight: 1.6,
@@ -587,13 +584,13 @@ export default function LuminaLearningPage() {
               {products.map((p) => (
                 <div key={p.id} style={{ display: "flex", flexDirection: "column" }}>
                   {/* Logo image */}
-                  <div style={{ marginBottom: "20px", height: "160px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div style={{ marginBottom: "20px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <Image
                       src={p.img}
                       alt={p.name}
                       width={p.imgW}
                       height={p.imgH}
-                      style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                      style={{ width: "240px", height: "140px", objectFit: "contain" }}
                       unoptimized
                     />
                   </div>
@@ -663,7 +660,7 @@ export default function LuminaLearningPage() {
         </section>
 
         {/* ── 3層架構 ── */}
-        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
+        <section style={{ backgroundColor: "#ffffff", paddingBottom: "10px" }} className="section-py">
           <div className="container-inner">
             {/* Image first */}
             <div style={{ borderRadius: "12px", overflow: "hidden", marginBottom: "40px" }}>
@@ -705,7 +702,7 @@ export default function LuminaLearningPage() {
         </section>
 
         {/* ── 個人化特質肖像 ── */}
-        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
+        <section style={{ backgroundColor: "#ffffff", paddingTop: "0px" }} className="section-py">
           <div className="container-inner">
             <div className="ll-two-col">
               <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
@@ -740,7 +737,7 @@ export default function LuminaLearningPage() {
                   alt="個人化特質肖像"
                   width={1102}
                   height={900}
-                  style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
+                  style={{ width: "70%", height: "auto", objectFit: "contain", display: "block" }}
                   unoptimized
                 />
               </div>
@@ -748,276 +745,205 @@ export default function LuminaLearningPage() {
           </div>
         </section>
 
-        {/* ── 敏捷學習發展工具 ── */}
+        {/* ── 影片 & 工具介紹 ── */}
         <section style={{ backgroundColor: "#f8f8fa" }} className="section-py">
           <div className="container-inner">
-            <div style={{ marginBottom: "16px" }}>
-              <div className="section-label">好玩、實用的</div>
-            </div>
-            <h2
-              style={{
-                fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 900,
-                fontSize: "clamp(20px, 2.5vw, 32px)",
-                color: "#221616",
-                lineHeight: 1.3,
-                marginBottom: "40px",
-              }}
-            >
-              敏捷學習發展工具
-            </h2>
-            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-              <Image
-                src={I("ll-agile-tools.png")}
-                alt="敏捷學習發展工具"
-                width={2022}
-                height={1252}
-                style={{ width: "100%", height: "auto", display: "block" }}
-                unoptimized
-              />
-            </div>
-          </div>
-        </section>
 
-        {/* ── 虛實整合數位應用 ── */}
-        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
-          <div className="container-inner">
-            <div style={{ marginBottom: "16px" }}>
-              <div className="section-label">虛實整合</div>
+            {/* Row 1: 2 videos */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "32px" }}>
+              {[
+                { id: "CawHvmfBo0A", title: "Lumina Spark 介紹影片" },
+                { id: "pElc6Hc0T8M", title: "Lumina Emotion 介紹影片" },
+              ].map((v, i) => (
+                <div key={i} style={{ position: "relative", paddingTop: "56.25%", borderRadius: "12px", overflow: "hidden" }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${v.id}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1`}
+                    title={v.title}
+                    allowFullScreen
+                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+                  />
+                </div>
+              ))}
             </div>
-            <h2
-              style={{
-                fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 900,
-                fontSize: "clamp(20px, 2.5vw, 32px)",
-                color: "#221616",
-                lineHeight: 1.3,
-                marginBottom: "16px",
-              }}
-            >
-              多元創新的數位應用
-            </h2>
-            <p
-              style={{
-                fontFamily: "'Noto Sans', sans-serif",
-                fontWeight: 400,
-                fontSize: "15px",
-                lineHeight: 1.85,
-                color: "#333",
-                marginBottom: "40px",
-                maxWidth: "760px",
-              }}
-            >
-              探索您 8 個維度的特質在「潛在」、「日常」、「壓力下」情境展現的變化。跟您的同事、朋友與家人分享、比對彼此的特質圖騰，討論彼此認知有哪些相同、哪些不同，透過不同人的反饋相互學習，提升個人覺察，同時也提升對於不同人更深層的認識與理解，幫助您學習了解跟不同人如何更有效地溝通、相處及互補協作！
-            </p>
-            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-              <Image
-                src={I("ll-digital.png")}
-                alt="虛實整合多元創新的數位應用"
-                width={2022}
-                height={1252}
-                style={{ width: "100%", height: "auto", display: "block" }}
-                unoptimized
-              />
-            </div>
-          </div>
-        </section>
 
-        {/* ── Spark Coach ── */}
-        <section style={{ backgroundColor: "#f8f8fa" }} className="section-py">
-          <div className="container-inner">
-            <div className="ll-two-col">
-              <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <h3
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(18px, 2vw, 24px)",
-                    color: "#221616",
-                    lineHeight: 1.3,
-                    marginBottom: "4px",
-                  }}
-                >
-                  Spark Coach 線上即時教練系統
-                </h3>
-                <p
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 600,
-                    fontSize: "15px",
-                    color: "#f9bd00",
-                    marginBottom: "20px",
-                  }}
-                >
-                  特質發展與目標行動推進器
-                </p>
-                <p
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "15px",
-                    lineHeight: 1.85,
-                    color: "#333",
-                  }}
-                >
-                  4 個步驟探索個人特質展現模式<br />
-                  啟動個人化發展目標與行動計畫
+            {/* Card: 好玩、實用的 / 敏捷學習發展工具 */}
+            <div className="ll-tool-card" style={{ marginBottom: "32px" }}>
+              <div className="ll-tool-card-text">
+                {/* Smiley icon — rounded square */}
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style={{ marginBottom: "20px" }} aria-hidden="true">
+                  <rect x="2" y="2" width="32" height="32" rx="8" stroke="#f9bd00" strokeWidth="2" fill="none" />
+                  <circle cx="13" cy="15" r="1.8" fill="#f9bd00" />
+                  <circle cx="23" cy="15" r="1.8" fill="#f9bd00" />
+                  <path d="M12 21 Q18 27 24 21" stroke="#f9bd00" strokeWidth="2" strokeLinecap="round" fill="none" />
+                </svg>
+                <p style={{
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(17px, 1.8vw, 22px)",
+                  color: "#221616",
+                  lineHeight: 1.45,
+                  margin: 0,
+                }}>
+                  好玩、實用的<br />
+                  敏捷學習發展工具
                 </p>
               </div>
-              <div
-                style={{
-                  borderRadius: "16px",
-                  overflow: "hidden",
-                  aspectRatio: "1754/1350",
-                  position: "relative",
-                }}
-              >
+              <div className="ll-tool-card-img">
                 <Image
-                  src={I("ll-spark-coach.png")}
-                  alt="Spark Coach"
+                  src="https://framerusercontent.com/images/iMWIzHc3paecio9kfWYTZMVLjA.png"
+                  alt="敏捷學習發展工具"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  unoptimized
+                />
+              </div>
+            </div>
+
+            {/* Single wide video */}
+            <div style={{ position: "relative", paddingTop: "56.25%", borderRadius: "12px", overflow: "hidden", marginBottom: "32px" }}>
+              <iframe
+                src="https://www.youtube.com/embed/nNg4-QGPox8?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1"
+                title="Lumina Sales 介紹影片"
+                allowFullScreen
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+              />
+            </div>
+
+            {/* Card: 虛實整合 / 多元創新的數位應用 (text left, image right) */}
+            <div className="ll-tool-card" style={{ marginBottom: "32px" }}>
+              <div className="ll-tool-card-text">
+                {/* Device icon — phone with side button */}
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style={{ marginBottom: "20px" }} aria-hidden="true">
+                  {/* Phone body */}
+                  <rect x="8" y="3" width="16" height="26" rx="3" stroke="#1a5fb4" strokeWidth="2" fill="none" />
+                  {/* Home indicator */}
+                  <rect x="13" y="26" width="6" height="1.5" rx="0.75" fill="#1a5fb4" />
+                  {/* Side button */}
+                  <rect x="24" y="11" width="2" height="5" rx="1" fill="#1a5fb4" />
+                  {/* Front camera dot */}
+                  <circle cx="16" cy="6.5" r="1" fill="#1a5fb4" />
+                </svg>
+                <p style={{
+                  fontFamily: "'Noto Sans', sans-serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(17px, 1.8vw, 22px)",
+                  color: "#221616",
+                  lineHeight: 1.45,
+                  margin: 0,
+                }}>
+                  虛實整合<br />
+                  多元創新的數位應用
+                </p>
+              </div>
+              <div className="ll-tool-card-img">
+                <Image
+                  src={I("ll-digital.png")}
+                  alt="虛實整合多元創新的數位應用"
                   fill
                   style={{ objectFit: "cover" }}
                   unoptimized
                 />
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* ── Journey to Composure ── */}
-        <section style={{ backgroundColor: "#ffffff" }} className="section-py">
-          <div className="container-inner">
-            <div className="ll-two-col" style={{ direction: "rtl" }}>
-              <div
-                style={{
-                  borderRadius: "16px",
-                  overflow: "hidden",
-                  aspectRatio: "1754/1350",
-                  position: "relative",
-                  direction: "ltr",
-                }}
-              >
-                <Image
-                  src={I("ll-jtc.png")}
-                  alt="Journey to Composure"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  unoptimized
-                />
+            {/* 2 cards: Spark Coach + Journey to Composure */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "32px" }}>
+              <div style={{ backgroundColor: "#ffffff", borderRadius: "20px", overflow: "hidden" }}>
+                <div style={{ position: "relative", aspectRatio: "16/9" }}>
+                  <Image src={I("ll-spark-coach.png")} alt="Spark Coach" fill style={{ objectFit: "cover" }} unoptimized />
+                </div>
+                <div style={{ padding: "28px 32px" }}>
+                  <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "12px", color: "#f9bd00", marginBottom: "6px", letterSpacing: "0.05em" }}>特質發展與目標行動推進器</p>
+                  <h3 style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 700, fontSize: "17px", color: "#221616", marginBottom: "10px", lineHeight: 1.4 }}>Spark Coach 線上即時教練系統</h3>
+                  <p style={{ fontFamily: "'Noto Sans', sans-serif", fontSize: "13px", lineHeight: 1.75, color: "#555" }}>
+                    4 個步驟探索個人特質展現模式，啟動個人化發展目標與行動計畫
+                  </p>
+                </div>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  direction: "ltr",
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(18px, 2vw, 24px)",
-                    color: "#221616",
-                    lineHeight: 1.3,
-                    marginBottom: "4px",
-                  }}
-                >
-                  Journey to Composure 線上即時練系統
-                </h3>
-                <p
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 600,
-                    fontSize: "15px",
-                    color: "#f9bd00",
-                    marginBottom: "20px",
-                  }}
-                >
-                  壓力感知與調適器
-                </p>
-                <p
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "15px",
-                    lineHeight: 1.85,
-                    color: "#333",
-                  }}
-                >
-                  5 個步驟探索個人「壓力情境」特質展現行為<br />
-                  透過有意識地練習提升對於壓力的覺察與韌性
-                </p>
+              <div style={{ backgroundColor: "#ffffff", borderRadius: "20px", overflow: "hidden" }}>
+                <div style={{ position: "relative", aspectRatio: "16/9" }}>
+                  <Image src={I("ll-jtc.png")} alt="Journey to Composure" fill style={{ objectFit: "cover" }} unoptimized />
+                </div>
+                <div style={{ padding: "28px 32px" }}>
+                  <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "12px", color: "#f9bd00", marginBottom: "6px", letterSpacing: "0.05em" }}>壓力感知與調適器</p>
+                  <h3 style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 700, fontSize: "17px", color: "#221616", marginBottom: "10px", lineHeight: 1.4 }}>Journey to Composure 線上教練系統</h3>
+                  <p style={{ fontFamily: "'Noto Sans', sans-serif", fontSize: "13px", lineHeight: 1.75, color: "#555" }}>
+                    5 個步驟探索個人「壓力情境」特質展現行為，透過有意識地練習提升對於壓力的覺察與韌性
+                  </p>
+                </div>
               </div>
             </div>
+
+            {/* Row: 2 more videos */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+              {[
+                { id: "HwQwEoFHLd8", title: "Lumina Team 介紹影片" },
+                { id: "Pm9uKUdHbjs", title: "Lumina Leader 介紹影片" },
+              ].map((v, i) => (
+                <div key={i} style={{ position: "relative", paddingTop: "56.25%", borderRadius: "12px", overflow: "hidden" }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${v.id}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1`}
+                    title={v.title}
+                    allowFullScreen
+                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+                  />
+                </div>
+              ))}
+            </div>
+
           </div>
         </section>
 
         {/* ── 應用情境及使用對象 ── */}
-        <section id="use-cases" style={{ backgroundColor: "#f8f8fa" }} className="section-py">
-          <div className="container-inner">
-            <div style={{ marginBottom: "16px" }}>
-              <div className="section-label">應用情境及使用對象</div>
-            </div>
+        <section id="use-cases" style={{ backgroundColor: "#ffffff" }} className="section-py">
+          <div className="container-inner" style={{ textAlign: "center" }}>
+            <h2
+              style={{
+                fontFamily: "'Noto Sans', sans-serif",
+                fontWeight: 900,
+                fontSize: "clamp(22px, 2.4vw, 38px)",
+                color: "#f9bd00",
+                letterSpacing: "0.02em",
+                lineHeight: 1.4,
+                marginBottom: "24px",
+              }}
+            >
+              &bull;&nbsp;&nbsp;應用情境及使用對象&nbsp;&nbsp;&bull;
+            </h2>
             <p
               style={{
                 fontFamily: "'Noto Sans', sans-serif",
                 fontWeight: 400,
                 fontSize: "15px",
                 lineHeight: 1.85,
-                color: "#333",
-                marginBottom: "48px",
-                maxWidth: "840px",
+                color: "#555",
+                maxWidth: "800px",
+                margin: "0 auto 56px",
               }}
             >
-              企業可應用 Lumina Learning 多元完整、一致性、系統化的工具與方法，建構組織內共同的語言、形塑文化和價值觀，可應用於組織人力資源的盤點、佈局、規劃，新事業部、專案團隊或組織重整人才配置模擬，關鍵人才 / 接班人的遴選與培育發展，團隊融合、凝聚、溝通、協作性提升，領導人自我覺察力、領導力、溝通力、教練力提升，透過「個人」與「團隊」的持續學習發展，推動企業組織的創新、轉型、升級！
+              企業可應用 Lumina Learning 多元完整、一致性、系統化的工具與方法，建構組織內共同的語言、形塑文化和價值觀，可應用於組織人力資源的盤點、佈局、規劃，關鍵人才 / 接班人的遴選與培育發展，團隊融合、凝聚、溝通、協作性提升，領導人自我覺察力、領導力、溝通力、教練力提升，透過「個人」與「團隊」的持續學習發展，推動企業組織的創新、轉型、升級！
             </p>
-
-            <div className="ll-five-col">
-              {targets.map((t, i) => (
-                <div
-                  key={i}
-                  style={{
-                    backgroundColor: "#ffffff",
-                    borderRadius: "12px",
-                    overflow: "hidden",
-                    boxShadow: "0 1px 6px rgba(0,0,0,0.07)",
-                  }}
-                >
-                  <div style={{ aspectRatio: "4/3", position: "relative" }}>
-                    <Image
-                      src={t.img}
-                      alt={t.title}
-                      fill
-                      style={{ objectFit: "cover", objectPosition: "top" }}
-                      unoptimized
-                    />
+            {/* Row 1: 2 items */}
+            <div style={{ display: "flex", justifyContent: "center", gap: "56px", marginBottom: "48px", flexWrap: "wrap" }}>
+              {targets.slice(0, 2).map((t, i) => (
+                <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", maxWidth: "200px" }}>
+                  <div style={{ width: "130px", height: "130px", borderRadius: "50%", overflow: "hidden", position: "relative", flexShrink: 0 }}>
+                    <Image src={t.img} alt={t.title} fill style={{ objectFit: "cover", objectPosition: "top" }} unoptimized />
                   </div>
-                  <div style={{ padding: "20px" }}>
-                    <p
-                      style={{
-                        fontFamily: "'Noto Sans', sans-serif",
-                        fontWeight: 700,
-                        fontSize: "15px",
-                        color: "#221616",
-                        marginBottom: "8px",
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {t.title}
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: "'Noto Sans', sans-serif",
-                        fontWeight: 400,
-                        fontSize: "13px",
-                        lineHeight: 1.7,
-                        color: "#555",
-                      }}
-                    >
-                      {t.desc}
-                    </p>
+                  <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "#221616", lineHeight: 1.4 }}>{t.title}</p>
+                  <p style={{ fontFamily: "'Noto Sans', sans-serif", fontSize: "13px", color: "#666", lineHeight: 1.65 }}>{t.desc}</p>
+                </div>
+              ))}
+            </div>
+            {/* Row 2: 3 items */}
+            <div style={{ display: "flex", justifyContent: "center", gap: "56px", flexWrap: "wrap" }}>
+              {targets.slice(2).map((t, i) => (
+                <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", maxWidth: "200px" }}>
+                  <div style={{ width: "130px", height: "130px", borderRadius: "50%", overflow: "hidden", position: "relative", flexShrink: 0 }}>
+                    <Image src={t.img} alt={t.title} fill style={{ objectFit: "cover", objectPosition: "top" }} unoptimized />
                   </div>
+                  <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "#221616", lineHeight: 1.4 }}>{t.title}</p>
+                  <p style={{ fontFamily: "'Noto Sans', sans-serif", fontSize: "13px", color: "#666", lineHeight: 1.65 }}>{t.desc}</p>
                 </div>
               ))}
             </div>
@@ -1025,212 +951,175 @@ export default function LuminaLearningPage() {
         </section>
 
         {/* ── 認證合作夥伴計劃 ── */}
-        <section id="certification" style={{ backgroundColor: "#221616" }} className="section-py">
+        <section id="certification" style={{ backgroundColor: "#f8f8fa" }} className="section-py">
           <div className="container-inner">
-            <div style={{ marginBottom: "16px" }}>
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  fontFamily: "'Noto Sans', sans-serif",
-                  fontWeight: 700,
-                  fontSize: "13px",
-                  letterSpacing: "0.1em",
-                  color: "#f9bd00",
-                  marginBottom: "12px",
-                }}
-              >
-                <span style={{ display: "block", width: "16px", height: "2px", background: "#f9bd00" }} />
+            {/* Section title with yellow circle dots */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", marginBottom: "32px" }}>
+              <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="5" fill="rgb(249,190,0)" /></svg>
+              <h2 style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 900, fontSize: "clamp(28px, 3.5vw, 50px)", color: "#f9bd00", letterSpacing: "0.02em", lineHeight: 1.3, margin: 0 }}>
                 認證合作夥伴計劃
-              </div>
+              </h2>
+              <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="5" fill="rgb(249,190,0)" /></svg>
             </div>
-            <div className="ll-two-col">
-              <div>
-                <p
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "15px",
-                    lineHeight: 1.85,
-                    color: "rgba(255,255,255,0.8)",
-                    marginBottom: "32px",
-                  }}
-                >
-                  根據企業組織發展需求，由 Lumina Learning 原廠認證技術導入，培育內部種子，應用 Lumina 簡單、易用、有效的系統化工具與方法，建構組織內共同的語言、文化與價值觀，深化組織、團隊、個人適性學習與發展，提升團隊默契、信任、向心力，共創共贏。
-                </p>
-                <h3
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(16px, 1.8vw, 20px)",
-                    color: "#ffffff",
-                    marginBottom: "24px",
-                    lineHeight: 1.4,
-                  }}
-                >
-                  「Lumina Spark 國際認證執行師」認證班
-                </h3>
-                <p
-                  style={{
-                    fontFamily: "'Noto Sans', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "14px",
-                    lineHeight: 1.8,
-                    color: "rgba(255,255,255,0.7)",
-                    marginBottom: "32px",
-                  }}
-                >
-                  認證學程結業，獲得原廠技術授權導入應用，擁有與全球同步、持續創新的系統化學習資訊、技術、工具與方法及在地化的技術支援與應用發展支持。
-                </p>
 
-                {/* Benefits grid */}
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "10px",
-                    marginBottom: "32px",
-                  }}
-                >
-                  {certBenefits.map((b, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "8px",
-                        fontFamily: "'Noto Sans', sans-serif",
-                        fontSize: "13px",
-                        color: "rgba(255,255,255,0.75)",
-                      }}
-                    >
-                      <span
-                        style={{
-                          width: "6px",
-                          height: "6px",
-                          borderRadius: "50%",
-                          backgroundColor: "#f9bd00",
-                          flexShrink: 0,
-                        }}
-                      />
-                      {b}
-                    </div>
-                  ))}
-                </div>
+            {/* Description */}
+            <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 400, fontSize: "18px", lineHeight: 1.8, color: "#333", textAlign: "center", marginBottom: "40px" }}>
+              根據企業組織發展需求，由 Lumina Learning 原廠認證技術導入，培育內部種子，應用 Lumina 簡單、易用、有效的系統化工具與方法，建構組織內共同的語言、文化與價值觀，深化組織、團隊、個人適性學習與發展，提升團隊默契、信任、向心力，共創共贏。
+            </p>
 
-                {/* Bonus */}
-                <div
-                  style={{
-                    backgroundColor: "rgba(249,189,0,0.1)",
-                    borderRadius: "12px",
-                    padding: "20px",
-                    marginBottom: "32px",
-                    border: "1px solid rgba(249,189,0,0.3)",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontFamily: "'Noto Sans', sans-serif",
-                      fontWeight: 700,
-                      fontSize: "14px",
-                      color: "#f9bd00",
-                      marginBottom: "12px",
-                    }}
-                  >
-                    認證加值送
-                  </p>
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: "8px",
-                    }}
-                  >
-                    {certBonus.map((b, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          fontFamily: "'Noto Sans', sans-serif",
-                          fontSize: "13px",
-                          color: "rgba(255,255,255,0.7)",
-                          display: "flex",
-                          gap: "6px",
-                          alignItems: "flex-start",
-                        }}
-                      >
-                        <span style={{ color: "#f9bd00", flexShrink: 0 }}>✓</span>
-                        {b}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSc52OLdFL79IRuhW5DDyYMH7quJsxV5U7yA4_8ZW8nmWs_WDA/viewform"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-accent"
-                  >
-                    洽詢認證課
-                  </a>
-                  <a
-                    href="https://lin.ee/4hHDypS"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-outline-white"
-                  >
-                    加入官方 LINE
-                  </a>
-                </div>
-              </div>
-
-              {/* Image */}
-              <div
-                style={{
-                  borderRadius: "16px",
-                  overflow: "hidden",
-                  aspectRatio: "1/1",
-                  position: "relative",
-                }}
-              >
-                <Image
-                  src={I("NSH2um5HBjMsbuYI97pt4ImkcM.png")}
-                  alt="Lumina Spark 國際認證執行師"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  unoptimized
-                />
-              </div>
+            {/* Dark banner */}
+            <div style={{ backgroundColor: "#221616", borderRadius: "12px", padding: "24px 40px", marginBottom: "40px", textAlign: "center" }}>
+              <h3 style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "clamp(18px, 2vw, 24px)", color: "#ffffff", lineHeight: 1.4, margin: 0 }}>
+                「Lumina Spark 國際認證執行師」認證班
+              </h3>
             </div>
-          </div>
-        </section>
 
-        {/* ── YouTube 影片 ── */}
-        <section style={{ backgroundColor: "#f8f8fa" }} className="section-py">
-          <div className="container-inner">
-            <div style={{ marginBottom: "40px" }}>
-              <div className="section-label">影片介紹</div>
-            </div>
-            <div className="ll-yt-grid">
-              {ytVideos.map((v, i) => (
-                <div key={i} style={{ position: "relative", paddingTop: "56.25%" }}>
-                  <iframe
-                    src={`https://www.youtube.com/embed/${v.id}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=0`}
-                    title={v.title}
-                    allowFullScreen
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      width: "100%",
-                      height: "100%",
-                      border: "none",
-                      borderRadius: "12px",
-                    }}
-                  />
+            {/* Two workshop photos */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "48px" }}>
+              {[
+                "https://framerusercontent.com/images/iExovzpBQBhlrv2I3p05PLRDzo.png",
+                "https://framerusercontent.com/images/BQFUlwiu8lRLojap6j8NEYXuAhw.png",
+              ].map((src, i) => (
+                <div key={i} style={{ position: "relative", borderRadius: "16px", overflow: "hidden", aspectRatio: "2022/1252" }}>
+                  <Image src={src} fill alt="" unoptimized style={{ objectFit: "cover", objectPosition: "center" }} />
                 </div>
               ))}
+            </div>
+
+            {/* Three-column: description | bullets col1 | bullets col2 */}
+            <div className="cert-3col" style={{ marginBottom: "48px" }}>
+              <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 500, fontSize: "18px", color: "#221616", lineHeight: 1.8, letterSpacing: "0.02em" }}>
+                認證學程結業，獲得原廠技術授權導入應用，擁有與全球同步、持續創新的系統化學習資訊、技術、工具與方法及在地化的技術支援與應用發展支持。
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {certBenefits.slice(0, 4).map((b, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: "10px", fontFamily: "'Noto Sans', sans-serif", fontSize: "18px", color: "#333", letterSpacing: "0.02em", lineHeight: 1.6 }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" style={{ flexShrink: 0 }}><circle cx="6" cy="6" r="6" fill="rgb(250,188,1)" /></svg>
+                    {b}
+                  </div>
+                ))}
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {certBenefits.slice(4).map((b, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: "10px", fontFamily: "'Noto Sans', sans-serif", fontSize: "18px", color: "#333", letterSpacing: "0.02em", lineHeight: 1.6 }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" style={{ flexShrink: 0 }}><circle cx="6" cy="6" r="6" fill="rgb(250,188,1)" /></svg>
+                    {b}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Two course cards */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "48px" }}>
+              {/* Card 1: Lumina Spark 認證學程 */}
+              <div style={{ borderRadius: "20px", border: "1.5px solid #e0e0e0", overflow: "hidden", display: "flex", minHeight: "200px", backgroundColor: "#ffffff" }}>
+                <div style={{ flex: "0 0 280px", padding: "40px 36px", display: "flex", flexDirection: "column", gap: "16px", justifyContent: "center" }}>
+                  <svg width="28" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2 4.5C2 3.12 3.12 2 4.5 2H11V22H4.5C3.12 22 2 20.88 2 19.5V4.5Z" stroke="#f9bd00" strokeWidth="1.5" fill="none" />
+                    <path d="M22 4.5C22 3.12 20.88 2 19.5 2H13V22H19.5C20.88 22 22 20.88 22 19.5V4.5Z" stroke="#f9bd00" strokeWidth="1.5" fill="none" />
+                  </svg>
+                  <h3 style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "20px", color: "#221616", lineHeight: 1.6, letterSpacing: "0.02em", margin: 0 }}>
+                    Lumina Spark<br />認證學程
+                  </h3>
+                </div>
+                <div style={{ flex: 1, position: "relative", minHeight: "200px" }}>
+                  <Image
+                    src="https://framerusercontent.com/images/iMWIzHc3paecio9kfWYTZMVLjA.png"
+                    fill alt="Lumina Spark 認證學程" unoptimized
+                    style={{ objectFit: "cover", objectPosition: "center" }}
+                  />
+                </div>
+              </div>
+
+              {/* Card 2: Lumina Spark 模組使用授權 */}
+              <div style={{ borderRadius: "20px", border: "1.5px solid #e0e0e0", overflow: "hidden", display: "flex", minHeight: "200px", backgroundColor: "#ffffff" }}>
+                <div style={{ flex: "0 0 280px", padding: "40px 36px", display: "flex", flexDirection: "column", gap: "16px", justifyContent: "center" }}>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="#f9bd00" strokeWidth="1.5" fill="none" />
+                    <path d="M8 12l3 3 5-5" stroke="#f9bd00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <h3 style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "20px", color: "#221616", lineHeight: 1.6, letterSpacing: "0.02em", margin: 0 }}>
+                    Lumina Spark<br />模組使用授權
+                  </h3>
+                </div>
+                <div style={{ flex: 1, position: "relative", minHeight: "200px" }}>
+                  <Image
+                    src="https://framerusercontent.com/images/UNlsfJ369QIUJ1rpocJEoLYFMM.png"
+                    fill alt="Lumina Spark 模組使用授權" unoptimized
+                    style={{ objectFit: "contain", objectPosition: "center" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* 認證加值送 */}
+            <div style={{ marginBottom: "40px" }}>
+              {/* Title with yellow triangle decorators */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", marginBottom: "48px" }}>
+                {[0, 1].map((k) => (
+                  <svg key={k} width="14" height="9" viewBox="0 0 19.811 12.5" aria-hidden="true">
+                    <path d="M 8.338 10.522 C 9.139 11.532 10.672 11.532 11.473 10.522 L 14.858 6.25 L 17.335 3.125 C 18.336 1.861 17.436 0 15.824 0 L 9.906 0 L 3.987 0 C 2.375 0 1.475 1.861 2.476 3.125 L 4.953 6.25 Z" fill="rgb(250,188,1)" />
+                  </svg>
+                ))}
+                <span style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "24px", color: "#221616", letterSpacing: "0.02em", lineHeight: 1.6 }}>
+                  認證加值送
+                </span>
+                {[0, 1].map((k) => (
+                  <svg key={k} width="14" height="9" viewBox="0 0 19.811 12.5" aria-hidden="true">
+                    <path d="M 8.338 10.522 C 9.139 11.532 10.672 11.532 11.473 10.522 L 14.858 6.25 L 17.335 3.125 C 18.336 1.861 17.436 0 15.824 0 L 9.906 0 L 3.987 0 C 2.375 0 1.475 1.861 2.476 3.125 L 4.953 6.25 Z" fill="rgb(250,188,1)" />
+                  </svg>
+                ))}
+              </div>
+
+              {/* Row 1: 4 items */}
+              <div style={{ display: "flex", justifyContent: "center", gap: "clamp(24px,4vw,56px)", marginBottom: "48px", flexWrap: "wrap" }}>
+                {certBonus.slice(0, 4).map((item, i) => (
+                  <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", minWidth: "120px" }}>
+                    <div style={{ width: "150px", height: "150px", borderRadius: "50%", overflow: "hidden", backgroundColor: "#f0f0f0", position: "relative", flexShrink: 0 }}>
+                      <Image src={item.img} fill alt={item.line1} unoptimized style={{ objectFit: item.fit, objectPosition: item.pos }} />
+                    </div>
+                    <div style={{ textAlign: "center" }}>
+                      <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "20px", color: "#221616", lineHeight: 1.6, letterSpacing: "0.02em" }}>{item.line1}</p>
+                      {item.line2 && <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "20px", color: "#221616", lineHeight: 1.6, letterSpacing: "0.02em" }}>{item.line2}</p>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Row 2: 5 items */}
+              <div style={{ display: "flex", justifyContent: "center", gap: "clamp(24px,4vw,56px)", flexWrap: "wrap" }}>
+                {certBonus.slice(4).map((item, i) => (
+                  <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", minWidth: "120px" }}>
+                    <div style={{ width: "150px", height: "150px", borderRadius: "50%", overflow: "hidden", backgroundColor: "#f0f0f0", position: "relative", flexShrink: 0 }}>
+                      <Image src={item.img} fill alt={item.line1} unoptimized style={{ objectFit: item.fit, objectPosition: item.pos }} />
+                    </div>
+                    <div style={{ textAlign: "center" }}>
+                      <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "20px", color: "#221616", lineHeight: 1.6, letterSpacing: "0.02em" }}>{item.line1}</p>
+                      {item.line2 && <p style={{ fontFamily: "'Noto Sans', sans-serif", fontWeight: 600, fontSize: "20px", color: "#221616", lineHeight: 1.6, letterSpacing: "0.02em" }}>{item.line2}</p>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc52OLdFL79IRuhW5DDyYMH7quJsxV5U7yA4_8ZW8nmWs_WDA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-dark"
+              >
+                洽詢認證課
+              </a>
+              <a
+                href="https://lin.ee/4hHDypS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent"
+              >
+                加入官方 LINE
+              </a>
             </div>
           </div>
         </section>
@@ -1238,14 +1127,31 @@ export default function LuminaLearningPage() {
         {/* ── 常見問題 ── */}
         <section id="faq" style={{ backgroundColor: "#ffffff" }} className="section-py">
           <div className="container-inner" style={{ maxWidth: "800px" }}>
-            <div style={{ marginBottom: "40px" }}>
-              <div className="section-label">常見問題</div>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <h2
+              style={{
+                fontFamily: "'Noto Sans', sans-serif",
+                fontWeight: 900,
+                fontSize: "clamp(22px, 2.4vw, 38px)",
+                color: "#f9bd00",
+                letterSpacing: "0.02em",
+                lineHeight: 1.4,
+                marginBottom: "40px",
+                textAlign: "center",
+              }}
+            >
+              &bull;&nbsp;&nbsp;常見問題&nbsp;&nbsp;&bull;
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               {faqs.map((faq, i) => (
                 <div
                   key={i}
-                  style={{ borderBottom: "1px solid rgba(34,22,22,0.12)" }}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    borderRadius: "20px",
+                    border: "1px solid rgba(34,22,22,0.1)",
+                    overflow: "hidden",
+                    boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
+                  }}
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
@@ -1254,7 +1160,7 @@ export default function LuminaLearningPage() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "space-between",
-                      padding: "20px 0",
+                      padding: "20px 28px",
                       background: "none",
                       border: "none",
                       textAlign: "left",
@@ -1270,24 +1176,25 @@ export default function LuminaLearningPage() {
                     <span
                       style={{
                         flexShrink: 0,
-                        fontSize: "20px",
+                        fontSize: "14px",
                         color: "#f9bd00",
                         transition: "transform 0.2s",
-                        transform: openFaq === i ? "rotate(45deg)" : "none",
+                        transform: openFaq === i ? "rotate(180deg)" : "none",
+                        display: "inline-block",
                       }}
                     >
-                      +
+                      ▼
                     </span>
                   </button>
                   {openFaq === i && (
                     <div
                       style={{
-                        paddingBottom: "20px",
+                        padding: "0 28px 24px",
                         fontFamily: "'Noto Sans', sans-serif",
                         fontWeight: 400,
                         fontSize: "15px",
                         lineHeight: 1.85,
-                        color: "#333",
+                        color: "#555",
                       }}
                     >
                       {faq.a}
@@ -1301,41 +1208,18 @@ export default function LuminaLearningPage() {
 
         {/* ── Bottom CTA ── */}
         <section
-          style={{
-            backgroundColor: "#24201e",
-            position: "relative",
-            overflow: "hidden",
-          }}
+          style={{ backgroundColor: "#24201e" }}
           className="section-py-lg"
         >
-          <div
-            style={{
-              position: "absolute",
-              right: 0,
-              top: 0,
-              bottom: 0,
-              width: "45%",
-              opacity: 0.3,
-            }}
-          >
-            <Image
-              src={I("ll-cta-bg.png")}
-              alt=""
-              fill
-              style={{ objectFit: "cover" }}
-              unoptimized
-            />
-          </div>
-          <div className="container-inner" style={{ position: "relative", zIndex: 2 }}>
+          <div className="container-inner" style={{ textAlign: "center" }}>
             <h2
               style={{
                 fontFamily: "'Noto Sans', sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(22px, 3vw, 40px)",
-                color: "#ffffff",
+                color: "#f9bd00",
                 lineHeight: 1.3,
                 marginBottom: "20px",
-                maxWidth: "560px",
               }}
             >
               善用科學工具，讓人才培訓更精準有效
@@ -1347,8 +1231,8 @@ export default function LuminaLearningPage() {
                 fontSize: "15px",
                 lineHeight: 1.85,
                 color: "rgba(255,255,255,0.8)",
-                marginBottom: "36px",
-                maxWidth: "500px",
+                maxWidth: "560px",
+                margin: "0 auto 36px",
               }}
             >
               導入 Lumina 企業認證，快速建立共通語言、強化領導效能、優化選才決策。讓人才成長與組織績效同步加速，現在就與我們洽詢，開啟轉變的第一步！
@@ -1385,29 +1269,59 @@ export default function LuminaLearningPage() {
         .ll-svc-row[data-imgright="true"]  .ll-svc-text { order: 1; }
         .ll-svc-row[data-imgright="true"]  .ll-svc-img  { order: 2; }
 
-        .ll-five-col {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 20px;
+        /* Tool card: text panel left, image right */
+        .ll-tool-card {
+          background: #ffffff;
+          border-radius: 20px;
+          overflow: hidden;
+          display: flex;
+          align-items: stretch;
+          min-height: 280px;
         }
-        .ll-yt-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 24px;
+        .ll-tool-card-text {
+          flex: 0 0 280px;
+          padding: 48px 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
+        .ll-tool-card-img {
+          flex: 1;
+          position: relative;
+          min-height: 240px;
+        }
+        /* Reverse: image left, text right */
+        .ll-tool-card-reverse .ll-tool-card-img { order: 1; }
+        .ll-tool-card-reverse .ll-tool-card-text { order: 2; flex: 0 0 320px; }
 
         @media (max-width: 1199px) {
           .ll-two-col { grid-template-columns: 1fr; gap: 32px; }
           .ll-svc-row { grid-template-columns: 1fr; gap: 32px; }
           .ll-svc-row .ll-svc-text { order: 1 !important; }
           .ll-svc-row .ll-svc-img  { order: 2 !important; }
-          .ll-five-col { grid-template-columns: repeat(3, 1fr); }
-          .ll-yt-grid { grid-template-columns: repeat(2, 1fr); }
+          .ll-tool-card { flex-direction: column; min-height: auto; }
+          .ll-tool-card-text { flex: none; }
+          .ll-tool-card-reverse .ll-tool-card-img { order: 1; }
+          .ll-tool-card-reverse .ll-tool-card-text { order: 2; flex: none; }
         }
         @media (max-width: 809px) {
           .ll-two-col { grid-template-columns: 1fr; gap: 24px; }
-          .ll-five-col { grid-template-columns: repeat(2, 1fr); }
-          .ll-yt-grid { grid-template-columns: 1fr; }
+          .ll-tool-card-text { padding: 32px 28px; }
+        }
+
+        /* Certification three-column layout */
+        .cert-3col {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 48px;
+          align-items: start;
+        }
+        @media (max-width: 1199px) {
+          .cert-3col { grid-template-columns: 1fr 1fr; gap: 32px; }
+          .cert-3col > p { grid-column: 1 / -1; }
+        }
+        @media (max-width: 809px) {
+          .cert-3col { grid-template-columns: 1fr; gap: 24px; }
         }
 
         /* Header show/hide helpers */
